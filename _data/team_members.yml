@@ -1,138 +1,137 @@
-- name: Milan P Allan
-  photo: Milan1.jpg
-  info: Professor
-  email: milan.allan@gmail.com
-  number_educ: 5
-  education1: Master ETHZ, Diplomarbeit with <a href="http://www.physik.uzh.ch/groups/osterwalder/">J Osterwalder</a>, University of Zurich
-  education2: PhD St Andrews (while at Cornell University) with <a href="http://dpmc.unige.ch/gr_baumberger/index.html">Felix Baumberger</a> and <a href="http://davisgroup.lassp.cornell.edu/">JC Davis</a>
-  education3: Postdoc Cornell
-  education4: <a href="http://www.ethfellows.ethz.ch/">ETH fellow</a> at ETHZ with <a href="https://qudev.phys.ethz.ch">Andreas Wallraff</a>
-  education5: <a href="https://www.universiteitleiden.nl/en/news/2017/07/milan-allan-wins-bryan-r.-coles-prize">Bryan R. Coles Prize 2017</a>
+- name: Ismail Ben Ayed
+  photo: Ismail.jpg
+  info: Professor, Department of Systems Engineering
+  email: Ismail.BenAyed@etsmtl.ca
+  number_educ: 4
+  education1: Graph cut algorithms, Convex optimization algorithms
+  education2: Medical image analysis, Computer vision
+  education3: Machine learning and pattern recognition, Markov random fields (MRF)
+  education4: Image segmentation, Computer assisted diagnosis
 
-- name: Jiasen Niu
-  photo: Jiasen.png
-  info: Leader Leiden Branch, started Oct 2020
-  email: niu@physics.leidenuniv.nl
-  number_educ: 2
-  education1: PhD with <a href="http://www2.phy.pku.edu.cn/~xilin/group-members.html">Xi Lin</a> and <a href="http://faculty.pku.edu.cn/JianWangGroup/en/zhym/25393/list/index.htm">Jian Wei</a>, Peking University
-  education2: BSc Jilin University
-
-- name: Yudai Sato
-  photo: Sato.jpeg
-  info: Postdoc, started September 2023
-  email: jwlee0421@postech.ac.kr
-  number_educ: 2
-  education1: PhD with [Yukio Hasegawa](https://www.issp.u-tokyo.ac.jp/maincontents/organization/labs/hasegawa_group_en.html) at the University of Tokyo
-  education2: Master, University of Tokyo
-
-- name: Thomas Gozlinski
-  photo: Thomas.jpg
-  info: Akademischer Rat, since November 2023
-  email: benschop@physics.leidenuniv.nl
-  number_educ: 2
-  education1: PhD, KIT, with [Wulf Wulfhekel](https://www.int.kit.edu/1941_701.php)
-  education2: MSc KIT
-
-- name: Premakumar Yanda
-  photo: Yanda.png
-  info: Postdoc, since March 2025
-  email: benschop@physics.leidenuniv.nl
-  number_educ: 2
-  education1: PhD, JNCASR, with A. Sundaresan
-  education2: MSc, Andhra University
-
-- name: Stefan Rudel
-  photo: Stefan.png
-  info: Postdoc, shared with [Kloß lab](https://kloss.cup.uni-muenchen.de/dr-simon-kloss/)
-  email: benschop@physics.leidenuniv.nl
+- name: Patrick Cardinal
+  photo: Cardinal.jpg
+  info: Director and Professor, Department of Software Engineering and IT
+  email: patrick.cardinal@etsmtl.ca
   number_educ: 3
-  education1: Postdoc LMU Munich with [Wolfgang Schnick](https://www.cup.uni-muenchen.de/ac/schnick/prof-dr-w-schnick/)
-  education2: PhD TUM and University of Marburg with [Florian Kraus](https://www.uni-marburg.de/de/fb15/arbeitsgruppen/anorganische_chemie/ag-kraus)
-  education3: MSc TUM
+  education1: PhD in Engineering at ÉTS
+  education2: Master's in Computer Science at McGill University
+  education3: Speech recognition, Language Identification, Emotion Detection
 
-- name: Devidas TR
-  photo: Devidas.png
-  info: Postdoc
-  email: benschop@physics.leidenuniv.nl
-  number_educ: 2
-  education1: Postdoc Bar-Ilan with [Beena Kalisky](https://beenalab.biu.ac.il)
-  education2: PhD Homi Bhabha National Institute
-  education3: MSc National Institute of Technology - Tiruchirappalli
+- name: Christian Desrosiers
+  photo: Desrosiers-2.jpg
+  info: Professor, Department of Software and IT Engineering
+  email: christian.desrosiers@etsmtl.ca
+  number_educ: 3
+  education1: PhD in applied mathematics at École Polytechnique de Montréal
+  education2: Postdoctoral research at University of Minnesota
+  education3: Data mining, Machine learning, Recommender systems
 
-- name: Yuval Nitzav
-  photo: Yuval.png
-  info: Postdoc
-  email: benschop@physics.leidenuniv.nl
-  number_educ: 2
-  education1: PhD Technion with [Amit Kanigel](https://phsites.technion.ac.il/arpes/)
-  education2: MSc Technion
+- name: José Dolz
+  photo: Dolz-Jose-300x300.jpg
+  info: Associate Professor, Software and Information Technology Engineering Department
+  email: Jose.Dolz@etsmtl.ca
+  number_educ: 3
+  education1: PhD at INSERM Onco-Thai U1189
+  education2: Postdoctoral researcher at LIVIA, ETS Montreal
+  education3: Medical image analysis, Deep learning, Weakly supervised learning
 
-- name: Amber Mozes
-  photo: Amber.png
-  info: PhD Student, started September 2021
-  email: b
-  number_educ: 2
-  education1: Master Applied Physics, TU Delft
-  education2: Casimir/Nanofront PhD fellowship
-  education3:
-  education4:
+- name: Vincent Duchaine
+  photo: vincent-duchaine-1.jpg
+  info: Professor, Department of Software and IT Engineering
+  email: vincent.duchaine@etsmtl.ca
+  number_educ: 3
+  education1: PhD in applied mathematics at École Polytechnique de Montréal
+  education2: Robotics, Mechatronics, Physical human-robot interaction
+  education3: Haptics, Tactile sensors, Impedance control
 
-- name: Maialen Ortego Larrazabal
-  photo: Maialen.png
-  info: PhD Student within a collaboration with the <a href="http://www.ingmarswart.nl">Swart Lab</a>
-  email: b
-  number_educ: 2
-  education1: Master Leiden University
-  education2: BSc, University of the Basque Country
-  education3:
-  education4:
+- name: Matthew Toews
+  photo: Toews-1.jpg
+  info: Professor, Department of Software Engineering and IT
+  email: matthew.toews@etsmtl.ca
+  number_educ: 3
+  education1: PhD in Electrical and Computer Engineering
+  education2: Postdoctoral fellow at Harvard Medical School (2009-2015)
+  education3: Computer vision, Medical image analysis, Information theory
 
-- name: Sanghun Lee 이상헌
-  photo: Sanghun.jpg
-  info: PhD Student
-  email: b
-  number_educ: 2
-  education1: Master Yonsei with [Doohee Cho](http://physicsyonsei.kr/en/people/professor?idx=48)
-  education2: BSc, Yonsei University
-  education3:
-  education4:
+- name: Robert Sabourin
+  photo: Sabourin-1.jpg
+  info: Professor Emeritus, Department of Software Engineering and IT
+  email: robert.sabourin@etsmtl.ca
+  number_educ: 3
+  education1: Machine learning, Pattern recognition, Biometrics
+  education2: Handwritten signature verification, Neural networks
+  education3: Feature selection, Ensemble of classifiers
 
-- name: Louw Feenstra
-  photo: Louw.jpeg
-  info: PhD Student, started November 2024
-  email: b
-  number_educ: 2
-  education1: BSc, Leiden University
-  education2: MSc, LMU Munich, with [Christian Pfleiderer](https://www.professoren.tum.de/en/pfleiderer-christian)
-  education3:
-  education4:
+- name: Marco Pedersoli
+  photo: Pedersoli.jpg
+  info: Professor, Department of System Engineering
+  email: Marco.Pedersoli@etsmtl.ca
+  number_educ: 3
+  education1: PhD at Computer Vision Center and UAB
+  education2: Post-doc at INRIA Grenoble and KU Leuven
+  education3: Computer vision, Deep learning, Weakly supervised learning
 
-- name: Ilse Kuijf
-  photo: ilse.jpeg
-  info: Shared PhD student in the [van Nieuwenburg group](https://evert.info)
-  email: Bastiaans@Physics.LeidenUniv.nl
-  number_educ: 1
-  education1: Master Leiden University
+- name: Alessandro Lameiras Koerich
+  photo: Koerich.jpg
+  info: Professor, Department of Software Engineering and IT
+  email: alessandro.lameiras-koerich@etsmtl.ca
+  number_educ: 3
+  education1: Full Professor at PUCPR, Brazil
+  education2: Co-founder of InviSys
+  education3: Computer vision, Machine learning, Biometrics
 
-- name: Marios-Apollon Marangos
-  photo: apollon.png
-  info: Engineer
-  email: Bastiaans@Physics.LeidenUniv.nl
-  number_educ: 1
-  education1: Master Physics TUM, with Kiutra
+- name: Eric Granger
+  photo: Granger.jpg
+  info: Professor, Department of Systems Engineering, Director of LIVIA
+  email: eric.granger@etsmtl.ca
+  number_educ: 4
+  education1: FRQS co-Chair in AI and Digital Health
+  education2: ETS Industrial Research co-Chair on Embedded Neural Networks
+  education3: Machine learning, Computer vision, Face recognition
+  education4: Deep learning, Medical imaging, Video analytics
 
-- name: Anna Tymofieieva
-  photo: anna.png
-  info: Admin
-  email: Bastiaans@Physics.LeidenUniv.nl
-  number_educ: 1
-  education1: Nationale Pädagogische H.-S.-Skoworoda-Universität, Charkiw
+- name: Tony Wong
+  photo: Wong.jpg
+  info: Professor, Department of Software Engineering and IT
+  email: tony.wong@etsmtl.ca
+  number_educ: 3
+  education1: Object-oriented analysis and design (UML, CASE tools)
+  education2: Parallel processing, Cluster computing
+  education3: Computational intelligence, Multi-objective optimization
 
-- name: "This could be you !"
-  photo: rock.jpg
-  info: See <a href="http://www.allanlab.org/vacancies">openings</a> for more info
-  email: milan.allan@gmail.com
-  number_educ: 0
-  education1:
-  education2:
-  education3:
+- name: Rafael Menelau Oliveira e Cruz
+  photo: rafael_final.jpeg
+  info: Professor, Department of Software Engineering and IT
+  email: Rafael.Menelau-Cruz@etsmtl.ca
+  number_educ: 3
+  education1: Machine learning, Pattern recognition
+  education2: Multiple classifier systems, Dynamic ensemble selection
+  education3: AutoML, Meta-learning, Biometrics
+
+- name: Mohamad Forouzanfar
+  photo: mohamad_final.jpeg
+  info: Associate Professor, Department of Software Engineering and IT
+  email: Mohamad.Forouzanfar@etsmtl.ca
+  number_educ: 4
+  education1: PhD in Electrical and Computer Engineering, University of Ottawa
+  education2: Postdoctoral positions at Harvard and Stanford
+  education3: Research Scientist at SRI International (2017-2020)
+  education4: Wearable medical systems, Sleep technology, Cardiovascular engineering
+
+- name: Mohammadhadi Shateri
+  photo: shateri-mohammadhadi-001-1.jpg
+  info: Assistant Professor, Department of System Engineering
+  email: mohammadhadi.shateri@etsmtl.ca
+  number_educ: 3
+  education1: PhD in Electrical Engineering, McGill University
+  education2: Data privacy and security in machine learning
+  education3: Machine unlearning, Deep generative models, Reinforcement learning
+
+# - name: "Join our team!"
+#   photo: rock.jpg
+#   info: See <a href="http://www.allanlab.org/vacancies">openings</a> for more info
+#   email: eric.granger@etsmtl.ca
+#   number_educ: 0
+#   education1:
+#   education2:
+#   education3:
