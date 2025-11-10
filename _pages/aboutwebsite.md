@@ -6,45 +6,58 @@ sitemap: false
 permalink: /aboutwebsite.html
 ---
 
-# Use this website as a template for your academic research group
+# LIVIA Lab Website
 
-This website is powered by [Jekyll](https://jekyllrb.com) and uses some [Bootstrap](http://www.getbootstrap.com) and  [Bootswatch](http://www.bootswatch.com). We tried to make it simple yet adaptable, so that it is easy for you to re-use it for your purpose. 
+This website showcases the research and activities of the [Laboratoire d'Imagerie, de Vision et d'Intelligence Artificielle (LIVIA)](https://liviamtl.ca/) at [École de technologie supérieure (ÉTS)](https://www.etsmtl.ca/), Université du Québec, Montreal.
 
-### Getting started
-All pages are written in [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for easy editing, and [Jekyll](https://jekyllrb.com) uses Liquid for the data-driven pages. The publicaion list, news items, and group members are stored as `.yml` data sheets (plain text) in the `_data folder`, so that one can update the website easily. The pages are in the `_pages` folder. Updating and maintaining is easy using [Github](http://www.github.com) (not worldpress-easy, but there are other advantages (see e.g. [this](https://www.taniarascia.com/make-a-static-website-with-jekyll/), or [this](http://www.webdesignerdepot.com/2015/11/jekyll-against-the-rest-of-the-world/)). [Jekyll](https://jekyllrb.com) takes all the markdown and data files, and creates beautiful `html` files in the `_site` folder.
+### About LIVIA
 
-If you never used [Jekyll](https://jekyllrb.com), read the [wikipedia article](https://en.wikipedia.org/wiki/Jekyll_(software)) article and check out [their website](https://jekyllrb.com). Same for [Github](http://www.github.com), which will host your first website draft. 
+LIVIA is dedicated to the perception and modeling of dynamic environments (2D and 3D scenes, speech, etc.) using techniques in artificial intelligence. Our laboratory focuses on large-scale processing, analysis and interpretation of images and videos.
 
-Create and open a github account, go to [our repository](https://github.com/allanlab/allanlab), and click 'fork'. This is now your copy of the website, and you can change and adapt it as you want. You don't have to link to us or mention us (but of course we appreciate it). Then change the name of the repository to "your_username" and the name of the branch to "gh-pages".  Your website is now automatically published under *your_username.github.io/your_username/*. Except that it probably still looks like our website. 
+**Research Focus:**
 
-To modify the webpage, you can either do everything on on github.com (go to a file, click "edit", then "commit", "push"), or install  [Jekyll](https://jekyllrb.com) on your computer and play with your local copy that you sync with the branch on github.com.  The former is much easier in the beginning, but a bit less convenient once you start rewriting everythint. To get it to work on your computer (and to learn a bit more about [Jekyll](https://jekyllrb.com)), [here](https://www.taniarascia.com/make-a-static-website-with-jekyll/) and [here](https://scotch.io/tutorials/getting-started-with-jekyll-plus-a-free-bootstrap-3-starter-theme) are tutorials on how to use it and how set it up locally. Also, consider using the [Github desktop app](http://www.desktop.github.com), I found it helpful.  
+Our research and development activities are based on six main conceptual axes:
 
-### Customization
-Now let's make this *your* website. 
+1. Machine learning
+2. Computer vision
+3. Pattern recognition
+4. Adaptive and intelligent systems
+5. Information fusion
+6. Optimization of complex systems
 
-First, go to the `news.ylm`, `publist.ylm`, and `team.ylm` files in the `_data` folder and insert your own data into the data fields. Watch out:  [Jekyll](https://jekyllrb.com) is quite strict about extra or missing spaces etc. Adhere to the format. In the beginning, test each change: commit, push, and check the published website.
+**Applications:**
 
-For publications, you can add a "1" in the highlight field, then it will be featured prominently. You can add important  news items (red, "news1"), and less important  news items (blue, "news2").
+The techniques developed at LIVIA solve concrete and complex problems in:
 
-For the news items, just keep adding them. The first 10 will be displayed on the 'home' page.
+- Analysis of medical, satellite, and aerial images
+- Biometrics: recognition of individuals from signature, face, voice, etc.
+- Automatic processing of handwritten documents
+- Affective computing for health monitoring
+- Security and surveillance
 
-For the `team.ylm` file
+We develop cutting-edge solutions such as convolutional neural networks to detect tumors or assess depression levels in patients, working with massive amounts of data that typically has limited annotations.
 
-Next, change the content of all files in the `_pages` folder.  To change the title in the homepage, go to `homelay.html` in the `_layout` folder.
+### Website Technical Details
 
-Lastly, change the footer and perhaps header appropriately (in `_include`).
+This website is powered by [Jekyll](https://jekyllrb.com) and uses [Bootstrap](http://www.getbootstrap.com) and [Bootswatch](http://www.bootswatch.com). The original template was created by the Allan Lab and has been adapted for LIVIA.
 
-You might also want to change the style or theme. I imported style files (in sass) from Bootstrap/Bootwatch, you can replace them with your own (in the `_sass directory`). For small changes, just work on the override stuff in the `main.sass` file in the `CSS` folder. Or change some variables in the `_variables.sass` file, like the background color etc. 
+**Structure:**
+- All pages are written in markdown for easy editing
+- Publication lists, news items, and team members are stored as `.yml` data sheets in the `_data` folder
+- Pages are located in the `_pages` folder
+- Jekyll generates HTML files in the `_site` folder
 
-As said, [Jekyll](https://jekyllrb.com) takes all the markdown and data files, and creates beautiful `html` files in the `_site` folder.In the end, either upload these files  to your server, or buy yourself a domain and check the instructions on github on how to host it there.
+### Contact
 
-### Copyright / credit
+For more information about LIVIA or to join our research team, please contact:
 
-You can use this template as you please. You don't have to link to us or mention us (but of course we appreciate it). We also welcome it if you send us an email with a link to your website, perhaps we'll publish a list here at some point. 
+**Prof. Eric Granger**  
+<!-- Director of LIVIA   -->
+Email: eric.granger@etsmtl.ca
 
-Comments welcome.
+---
 
-Code released under the MIT License. 
+*Original template credit: Allan Lab. Template adapted and customized for LIVIA.*
 
 
 
