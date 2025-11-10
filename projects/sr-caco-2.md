@@ -22,11 +22,11 @@ Canada
 
 
 
-[![Download](https://img.shields.io/badge/Download-blue?logo=openaccess)](https://github.com/sbelharbi/sr-caco-2?tab=readme-ov-file#download-sr-caco-2)
+[![Download](https://img.shields.io/badge/Download-blue?logo=openaccess)](https://github.com/LIVIAETS/sr-caco-2?tab=readme-ov-file#download-sr-caco-2)
 [![arXiv](https://img.shields.io/badge/arXiv-2406.09168-b31b1b.svg?logo=arxiv&logoColor=B31B1B)](https://arxiv.org/pdf/2406.09168)
-[![Github](https://img.shields.io/badge/Github-sr--caco--2-brightgreen.svg?logo=github)](https://github.com/sbelharbi/sr-caco-2)
+[![Github](https://img.shields.io/badge/Github-sr--caco--2-brightgreen.svg?logo=github)](https://github.com/LIVIAETS/sr-caco-2)
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Weights-yellow)](https://huggingface.co/sbelharbi/sr-caco-2)
-[![DOI](https://zenodo.org/badge/810271648.svg)](https://zenodo.org/doi/10.5281/zenodo.11617172) [[v1.0.0]](https://github.com/sbelharbi/sr-caco-2/releases/tag/v1.0.0)
+[![DOI](https://zenodo.org/badge/810271648.svg)](https://zenodo.org/doi/10.5281/zenodo.11617172) [[v1.0.0]](https://github.com/LIVIAETS/sr-caco-2/releases/tag/v1.0.0)
 
 <br />
 
@@ -75,7 +75,7 @@ Canada
 
 ### Abstract
 
-Confocal fluorescence microscopy is one of the most accessible and widely used imaging techniques for the study of biological processes at the cellular and subcellular levels. Scanning confocal microscopy allows the capture of high-quality images from thick three-dimensional (3D) samples, yet suffers from well-known limitations such as photobleaching and phototoxicity of specimens caused by intense light exposure, which limits its use in some applications, especially for living cells. Cellular damage can be alleviated by changing imaging parameters to reduce light exposure, often at the expense of image quality. Machine/deep learning methods for single-image super-resolution (SISR) can be applied to restore image quality by upscaling lower-resolution (LR) images to produce high-resolution images (HR). These SISR methods have been successfully applied to photo-realistic images due partly to the abundance of publicly available datasets. In contrast, the lack of publicly available data partly limits their application and success in scanning confocal microscopy. In this paper, we introduce a large scanning confocal microscopy dataset named SR-CACO-2 that is comprised of low- and high-resolution image pairs marked for three different fluorescent markers. It allows to evaluate the performance of SISR methods on three different upscaling levels (X2, x34, x8). SR-CACO-2 contains the human epithelial cell line Caco-2 (ATCC HTB-37), and it is composed of 2,200 unique images, captured with four resolutions and three markers, that have been translated in the form of 9,937 patches for experiments with SISR methods. Given the new SR-CACO-2 dataset, we also provide benchmarking results for 16 state-of-the-art methods that are representative of the main SISR families. Results show that these methods have limited success in producing high-resolution textures, indicating that SR-CACO-2 represents a challenging problem. The dataset is released under a Creative Commons license (CC BY-NC-SA 4.0), and it can be accessed freely. Our dataset, code and pretrained weights for SISR methods are publicly available: [github.com/sbelharbi/sr-caco-2](https://github.com/sbelharbi/sr-caco-2).
+Confocal fluorescence microscopy is one of the most accessible and widely used imaging techniques for the study of biological processes at the cellular and subcellular levels. Scanning confocal microscopy allows the capture of high-quality images from thick three-dimensional (3D) samples, yet suffers from well-known limitations such as photobleaching and phototoxicity of specimens caused by intense light exposure, which limits its use in some applications, especially for living cells. Cellular damage can be alleviated by changing imaging parameters to reduce light exposure, often at the expense of image quality. Machine/deep learning methods for single-image super-resolution (SISR) can be applied to restore image quality by upscaling lower-resolution (LR) images to produce high-resolution images (HR). These SISR methods have been successfully applied to photo-realistic images due partly to the abundance of publicly available datasets. In contrast, the lack of publicly available data partly limits their application and success in scanning confocal microscopy. In this paper, we introduce a large scanning confocal microscopy dataset named SR-CACO-2 that is comprised of low- and high-resolution image pairs marked for three different fluorescent markers. It allows to evaluate the performance of SISR methods on three different upscaling levels (X2, x34, x8). SR-CACO-2 contains the human epithelial cell line Caco-2 (ATCC HTB-37), and it is composed of 2,200 unique images, captured with four resolutions and three markers, that have been translated in the form of 9,937 patches for experiments with SISR methods. Given the new SR-CACO-2 dataset, we also provide benchmarking results for 16 state-of-the-art methods that are representative of the main SISR families. Results show that these methods have limited success in producing high-resolution textures, indicating that SR-CACO-2 represents a challenging problem. The dataset is released under a Creative Commons license (CC BY-NC-SA 4.0), and it can be accessed freely. Our dataset, code and pretrained weights for SISR methods are publicly available: [github.com/sbelharbi/sr-caco-2](https://github.com/LIVIAETS/sr-caco-2).
 
 ### License / Download
 **THIS SR-CACO-2 DATASET IS LICENSED UNDER CREATIVE COMMONS
@@ -84,7 +84,7 @@ ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 4.0 INTERNATIONAL LICENSE (CC BY-NC-SA 4.0)
 
 <p align="center"><img src="/material/sr-caco-2/LICENSE.png" alt="outline" width="20%"></p>
 
-The download link can be found at: [Download SR-CACO-2](https://github.com/sbelharbi/sr-caco-2?tab=readme-ov-file#download-sr-caco-2).
+The download link can be found at: [Download SR-CACO-2](https://github.com/LIVIAETS/sr-caco-2?tab=readme-ov-file#download-sr-caco-2).
 
 
 ### Poster
