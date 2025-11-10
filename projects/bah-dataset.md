@@ -30,9 +30,9 @@ Eric Granger<sup>1</sup>**
 <sup>4</sup> Montreal Behavioural Medicine Centre, CIUSSS Nord-de-l’Ile-de-Montréal, Canada
 
 
-[![Download](https://img.shields.io/badge/Dataset%20Download-blue?logo=openaccess)](https://github.com/sbelharbi/bah-dataset?tab=readme-ov-file#-bah-dataset-download-)
+[![Download](https://img.shields.io/badge/Dataset%20Download-blue?logo=openaccess)](https://github.com/LIVIAETS/bah-dataset?tab=readme-ov-file#-bah-dataset-download-)
 [![arXiv](https://img.shields.io/badge/arXiv-2505.19328-b31b1b.svg?logo=arxiv&logoColor=B31B1B)](https://arxiv.org/pdf/2505.19328)
-[![Github](https://img.shields.io/badge/Github-bah--dataset-brightgreen.svg?logo=github)](https://github.com/sbelharbi/bah-dataset)
+[![Github](https://img.shields.io/badge/Github-bah--dataset-brightgreen.svg?logo=github)](https://github.com/LIVIAETS/bah-dataset)
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Weights-yellow)](https://huggingface.co/sbelharbi/bah-dataset)
 
 <br />
@@ -75,11 +75,11 @@ Automatic learning systems provide a cost-effective alternative that can adapt t
 
 This paper introduces a first Behavioural Ambivalence/Hesitancy (*BAH*) dataset collected for subject-based multimodal recognition of A/H in videos.  It contains videos from 224 participants captured across 9 provinces in Canada, with different age, and ethnicity. Through our web platform, we recruited participants to answer 7 questions, some of which were designed to elicit A/H while recording themselves via webcam with microphone. *BAH* amounts to 1,118 videos for a total duration of 8.26 hours with 1.5 hours of A/H.  Our behavioural team annotated timestamp segments to indicate where A/H occurs, and provide frame- and video-level annotations with the A/H cues. Video transcripts and their timestamps are also included, along with cropped and aligned faces in each frame, and a variety of participants meta-data.
 
-Additionally, this paper provides preliminary benchmarking results baseline models for *BAH* at frame- and video-level recognition with mono- and multi-modal setups. It also includes results on models for zero-shot prediction, and for personalization using unsupervised domain adaptation. The limited performance of baseline models highlights the challenges of recognizing A/H in real-world videos. The data, code, and pretrained weights are available: [github.com/sbelharbi/bah-dataset](https://github.com/sbelharbi/bah-dataset).
+Additionally, this paper provides preliminary benchmarking results baseline models for *BAH* at frame- and video-level recognition with mono- and multi-modal setups. It also includes results on models for zero-shot prediction, and for personalization using unsupervised domain adaptation. The limited performance of baseline models highlights the challenges of recognizing A/H in real-world videos. The data, code, and pretrained weights are available: [github.com/sbelharbi/bah-dataset](https://github.com/LIVIAETS/bah-dataset).
 
 ### License / Download
 **THIS BAH DATASET IS LICENSED UNDER PROPRIETARY LICENSE FOR RESEARCH ONLY. TO REQUEST THE DATASET PLEASE FOLLOW THESE INSTRUCTIONS:**
-[BAH-DATSET-REQUEST](https://github.com/sbelharbi/bah-dataset?tab=readme-ov-file#-bah-dataset-download-).
+[BAH-DATSET-REQUEST](https://github.com/LIVIAETS/bah-dataset?tab=readme-ov-file#-bah-dataset-download-).
 
 
 
