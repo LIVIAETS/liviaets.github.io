@@ -1,40 +1,39 @@
-# LIVIA Lab Website
+# LIVIA — website
 
-This repository hosts the LIVIA lab website (Laboratoire d'Imagerie, de Vision et d'Intelligence Artificielle) at École de technologie supérieure (ÉTS), Université du Québec — Montréal.
+Public website for **LIVIA** (Laboratoire d'Imagerie, de Vision et d'Intelligence Artificielle) at the École de technologie supérieure (ÉTS), Université du Québec — Montréal.
 
-Purpose
-- Public-facing website for LIVIA: team, projects, datasets, publications, news, and vacancies.
-- Lightweight Jekyll + Bootstrap site for easy editing and deployment.
+This is a **static site** (plain HTML / CSS / JS) — no build step. GitHub Pages serves the files directly (a `.nojekyll` file disables Jekyll processing).
 
-Quick structure
-- _pages/         — site pages (home, team, datasets, vacancies, etc.)
-- _data/          — YAML data (team_members.yml, news.yml, alumni_*.yml, ...)
-- _includes/      — reusable HTML fragments (header, footer, datasets card, ...)
-- _layouts/       — Jekyll layouts used by pages
-- images/         — site images and dataset visuals
-- projects/       — project pages and dataset entries
-- _site/          — generated site (do not edit)
+## Structure
 
-Local preview
-1. Install Ruby and Bundler on Windows.
-2. From repository root:
-   - bundle install
-   - bundle exec jekyll serve --host 0.0.0.0
-3. Open http://localhost:4000
+```
+index.html                 Home (animated hero, research, datasets, highlights)
+team.html                  Faculty, students & alumni
+datasets.html              Dataset index
+datasets/bah.html          BAH dataset (detailed) + ABAW 11th challenge
+datasets/sr-caco-2.html    SR-CACO-2 dataset (detailed)
+join.html                  Open positions
+assets/css/style.css       Design system (dark/light, system-adaptive + toggle)
+assets/js/main.js          Hero canvas, scroll reveals, counters, theme, nav
+favicon.svg                LIVIA mark
+images/, material/         Photos, logos and dataset figures
+```
 
-Editing notes
-- Page front matter controls title/permalink/layout. Use `page.title` in layouts to display the title.
-- Add team entries in `_data/team_members.yml`.
-- Add news items in `_data/news.yml`.
-- Dataset/project pages live under `projects/` or `_pages/` with `permalink:` set.
-- Images referenced with `{{ site.url }}{{ site.baseurl }}/images/...`
+## Local preview
 
-Deployment
-- Build with `jekyll build` and deploy the `_site` output to your hosting (GitHub Pages, Netlify, etc.).
+Any static server works, e.g.:
 
-Contact
-- For site updates or issues: eric.granger@etsmtl.ca
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000
+```
 
-License
-- Code in this repo is released under the MIT License.
+## Editing
 
+- **Content** lives directly in the HTML pages (nav and footer are repeated per page — keep them in sync).
+- **Theme** adapts to the OS light/dark setting and can be toggled; the choice is stored in `localStorage`.
+- **Dataset** figures live under `material/<dataset>/`.
+
+## History
+
+The previous Jekyll/Bootstrap version of this site is preserved on the **`archive/jekyll-site`** branch.

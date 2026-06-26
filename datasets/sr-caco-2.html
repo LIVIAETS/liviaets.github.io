@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SR-CACO-2 Dataset — Confocal Microscopy Super-Resolution · LIVIA</title>
+  <meta name="description" content="SR-CACO-2: a large-scale dataset for single-image super-resolution in confocal fluorescence microscopy. 2,200 images, 9,937 patches, three markers, three scales. NeurIPS 2024.">
+  <meta name="theme-color" content="#6366f1">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <script>(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}document.documentElement.classList.add("js");})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="nav-brand" href="/"><img src="/images/brand/livia-logo.svg" alt="LIVIA"></a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/team.html">Team</a></li>
+        <li><a href="/datasets.html">Datasets</a></li>
+        <li><a href="/join.html">Join</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle theme"></button>
+        <button class="icon-btn nav-burger" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="wrap reveal">
+        <div class="kicker">Dataset &amp; Benchmark · NeurIPS 2024</div>
+        <h1>SR-CACO-2 — Confocal Microscopy Image Super-Resolution</h1>
+        <p>A large-scale dataset for single-image super-resolution (SISR) in confocal fluorescence microscopy, with real low-resolution images captured directly by the microscope.</p>
+      </div>
+    </section>
+
+    <article class="article">
+      <p class="authors reveal"><strong>Soufiane Belharbi</strong><sup>1</sup>, Mara KM Whitford<sup>2,3</sup>, Phuong Hoang<sup>2</sup>, Shakeeb Murtaza<sup>1</sup>, Luke McCaffrey<sup>2,3,4</sup>, Eric Granger<sup>1</sup></p>
+      <p class="affil reveal"><sup>1</sup> LIVIA, ILLS, Dept. of Systems Engineering, ÉTS Montréal &nbsp;·&nbsp; <sup>2</sup> Goodman Cancer Institute, McGill University &nbsp;·&nbsp; <sup>3</sup> Dept. of Biochemistry, McGill University &nbsp;·&nbsp; <sup>4</sup> Gerald Bronfman Dept. of Oncology, McGill University</p>
+
+      <div class="badges reveal">
+        <a href="https://github.com/LIVIAETS/sr-caco-2?tab=readme-ov-file#download-sr-caco-2" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Download-blue?logo=openaccess" alt="Download"></a>
+        <a href="https://arxiv.org/pdf/2406.09168" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/arXiv-2406.09168-b31b1b.svg?logo=arxiv&logoColor=B31B1B" alt="arXiv"></a>
+        <a href="https://github.com/LIVIAETS/sr-caco-2" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Github-sr--caco--2-brightgreen.svg?logo=github" alt="GitHub"></a>
+        <a href="https://huggingface.co/sbelharbi/sr-caco-2" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Weights-yellow" alt="Hugging Face"></a>
+        <a href="https://zenodo.org/doi/10.5281/zenodo.11617172" target="_blank" rel="noopener"><img src="https://zenodo.org/badge/810271648.svg" alt="DOI"></a>
+      </div>
+
+      <div class="fig reveal"><a href="/material/sr-caco-2/patch-demo.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/patch-demo.png" alt="SR-CACO-2 patch demo"></a></div>
+
+      <h2 class="reveal">At a glance</h2>
+      <div class="metrics reveal">
+        <div class="metric"><div class="n grad-text">2,200</div><div class="l">Unique images</div></div>
+        <div class="metric"><div class="n grad-text">9,937</div><div class="l">LR/HR patches</div></div>
+        <div class="metric"><div class="n grad-text">3</div><div class="l">Scales (×2, ×4, ×8)</div></div>
+        <div class="metric"><div class="n grad-text">16</div><div class="l">Benchmarked SISR methods</div></div>
+      </div>
+      <div class="fig reveal"><a href="/material/sr-caco-2/nutrition-label.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/nutrition-label.png" alt="SR-CACO-2 nutrition label"></a><figcaption>Dataset "nutrition label" — composition summary.</figcaption></div>
+
+      <h2 class="reveal">Abstract</h2>
+      <p class="reveal">Confocal fluorescence microscopy is one of the most accessible and widely used imaging techniques for studying biological processes at the cellular and subcellular levels. Scanning confocal microscopy captures high-quality images from thick 3D samples, yet suffers from well-known limitations such as photobleaching and phototoxicity caused by intense light exposure — limiting its use, especially for living cells. Cellular damage can be reduced by changing imaging parameters to lower light exposure, often at the expense of image quality.</p>
+      <p class="reveal">Machine/deep-learning methods for single-image super-resolution (SISR) can restore image quality by upscaling lower-resolution (LR) images to high-resolution (HR). These methods have been successful on photo-realistic images, partly due to abundant public datasets — but the lack of public data limits their success in scanning confocal microscopy. We introduce <strong>SR-CACO-2</strong>, a large scanning confocal microscopy dataset of low- and high-resolution image pairs marked for three fluorescent markers. It enables evaluation of SISR methods at three upscaling levels (×2, ×4, ×8). SR-CACO-2 contains the human epithelial cell line Caco-2 (ATCC HTB-37), composed of <strong>2,200 unique images</strong> captured with four resolutions and three markers, translated into <strong>9,937 patches</strong>. We provide benchmarking results for <strong>16 state-of-the-art methods</strong> representative of the main SISR families; results show limited success in producing high-resolution textures, indicating that SR-CACO-2 is a challenging problem. The dataset, code and pretrained weights are publicly available.</p>
+
+      <h2 class="reveal">License &amp; download</h2>
+      <p class="reveal">SR-CACO-2 is released under a <strong>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</strong> license and can be accessed freely. See the <a href="https://github.com/LIVIAETS/sr-caco-2?tab=readme-ov-file#download-sr-caco-2" target="_blank" rel="noopener">download instructions</a>.</p>
+      <div class="fig reveal" style="max-width:160px"><img src="/material/sr-caco-2/LICENSE.png" alt="CC BY-NC-SA 4.0"></div>
+
+      <h2 class="reveal">Poster &amp; slides</h2>
+      <div class="grid g2 reveal">
+        <div class="fig" style="margin:0"><a href="/material/sr-caco-2/poster.pdf" target="_blank" rel="noopener"><img src="/material/sr-caco-2/poster-thumbnail.png" alt="Poster"></a><figcaption>NeurIPS 2024 poster (PDF)</figcaption></div>
+        <div class="fig" style="margin:0"><a href="/material/sr-caco-2/slides.pdf" target="_blank" rel="noopener"><img src="/material/sr-caco-2/slides-thumbnail.png" alt="Slides"></a><figcaption>Talk slides (PDF)</figcaption></div>
+      </div>
+
+      <h2 class="reveal">Capture</h2>
+      <div class="fig reveal"><a href="/material/sr-caco-2/data-capturing.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/data-capturing.png" alt="Data capturing"></a><figcaption>Automated multi-resolution acquisition pipeline.</figcaption></div>
+
+      <h2 class="reveal">Diversity</h2>
+      <p class="reveal">To ensure technical and biological diversity, image acquisition was automated: each set of 100 images was stitched (10 × 10) into a tile, so each of 22 tiles represents 100 unique fields of view — 2,200 unique images, each captured at four scales for three markers. Collecting one tile across four resolutions takes ~12–16 hours. The 22 wells came from 4 independent experiments using 5–6 wells per plate, ensuring standard biological diversity.</p>
+      <p class="reveal">An object-based analysis of the 2,200 high-resolution fields of view reveals ~16,800 multi-cellular objects. Cells were cultivated in a 3D protein matrix forming tissue-like cyst structures, with size variations spanning two orders of magnitude and substantial variation in aspect ratio and circularity — covering single-layered, multi-layered and solid phenotypes.</p>
+      <div class="fig reveal"><a href="/material/sr-caco-2/object-analysis.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/object-analysis.png" alt="Object analysis"></a><figcaption>Object-based analysis of cellular structures.</figcaption></div>
+
+      <h2 class="reveal">Patch extraction &amp; distribution</h2>
+      <div class="fig reveal"><a href="/material/sr-caco-2/patching.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/patching.png" alt="Patch extraction"></a></div>
+      <div class="fig reveal"><a href="/material/sr-caco-2/distribution.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/distribution.png" alt="Patch distribution"></a></div>
+
+      <h2 class="reveal">Real vs. interpolated low-resolution</h2>
+      <p class="reveal">We compared real (microscope) LR against bicubic LR. Their absolute pixel-wise difference can fall in [0, 50] and [200, 255], concentrated over cell regions. Real LR images are noisier (single scan) while HR images are averaged over nine scans; bicubic LR tends to be very smooth and even preserves structure from HR. This contrast confirms that bicubic LR cannot substitute for real LR in training and evaluation — real LR images are essential to simulate realistic deployment conditions.</p>
+      <div class="fig reveal"><a href="/material/sr-caco-2/interpolation-vs-microscope.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/interpolation-vs-microscope.png" alt="Interpolation vs microscope"></a></div>
+
+      <h2 class="reveal">Statistics</h2>
+      <div class="fig reveal"><a href="/material/sr-caco-2/area.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/area.png" alt="ROI size"></a></div>
+      <div class="fig reveal"><a href="/material/sr-caco-2/file-tree.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/file-tree.png" alt="File tree"></a></div>
+
+      <h2 class="reveal">SISR benchmarks</h2>
+      <div class="fig reveal"><a href="/material/sr-caco-2/roi-perf.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/roi-perf.png" alt="ROI super-resolution performance"></a></div>
+      <div class="fig reveal"><a href="/material/sr-caco-2/prediction.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/prediction.png" alt="Super-resolution prediction"></a></div>
+
+      <h2 class="reveal">Downstream tasks: cell detection &amp; segmentation</h2>
+      <div class="fig reveal"><a href="/material/sr-caco-2/cell-detect-cell2.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/cell-detect-cell2.png" alt="Cell detection CELL2"></a></div>
+      <div class="fig reveal"><a href="/material/sr-caco-2/cell-segmentation.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/cell-segmentation.png" alt="Cell segmentation"></a></div>
+
+      <h2 class="reveal">Conclusion</h2>
+      <p class="reveal">The few existing SISR microscopy datasets are mostly private, limiting research. SR-CACO-2 addresses this gap with three scales (×2, ×4, ×8) plus HR, three protein markers under different lighting, and ~9k real LR/HR patch pairs, following standard, reproducible capture and evaluation protocols. Benchmarking shows current SISR methods cannot accurately reproduce HR images, making the dataset challenging. Beyond image quality, we evaluated downstream biology tasks such as cell detection and segmentation, where several methods showed promising results. SR-CACO-2 can drive progress in SISR for microscopy — from fixed to live imaging, opening the door to instantaneous inter-cellular observation with reduced cell damage.</p>
+
+      <h2 class="reveal">Acknowledgments</h2>
+      <p class="reveal">Supported in part by the Canadian Institutes of Health Research, the Natural Sciences and Engineering Research Council of Canada, and the Digital Research Alliance of Canada.</p>
+
+      <h2 class="reveal">Citation</h2>
+      <pre class="reveal"><code>@inproceedings{belharbi24-sr-caco-2,
+  title={SR-CACO-2: A Dataset for Confocal Fluorescence
+         Microscopy Image Super-Resolution},
+  author={Belharbi, S. and Whitford, M.K.M. and Hoang, P. and
+          Murtaza, S. and McCaffrey, L. and Granger, E.},
+  booktitle={NeurIPS},
+  year={2024}
+}</code></pre>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <span class="fb">LIVIA</span>
+          <p>Laboratoire d'Imagerie, de Vision et d'Intelligence Artificielle — at the École de technologie supérieure (ÉTS), Université du Québec, Montréal.</p>
+          <a class="fets" href="https://www.etsmtl.ca/" target="_blank" rel="noopener"><img src="/images/brand/ets-logo.svg" alt="ÉTS"></a>
+        </div>
+        <div class="fcol">
+          <h5>Explore</h5>
+          <a href="/">Home</a><a href="/team.html">Team</a><a href="/datasets.html">Datasets</a><a href="/join.html">Join Us</a>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <p>1100 Notre-Dame St W<br>Montréal, QC H3C 1K3, Canada<br><a href="mailto:eric.granger@etsmtl.ca">eric.granger@etsmtl.ca</a></p>
+        </div>
+      </div>
+      <div class="fbot"><span>© 2026 LIVIA — ÉTS, Université du Québec.</span><span>Made in Montréal</span></div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
