@@ -2,11 +2,31 @@
 layout: default
 ---
 
-  <div id="homeid" class="col-sm-8">
-        <h1>Welcome to the LIVIA-ETS Lab</h1>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="hero-eyebrow">★ Computer Vision &amp; AI Research</span>
+      <h1>Teaching machines to see, understand &amp; reason</h1>
+      <p class="lead">LIVIA is the Laboratory of Imaging, Vision and Artificial Intelligence at ÉTS, Université du Québec — advancing computer vision, deep learning and trustworthy AI for healthcare, security and beyond.</p>
+      <div class="hero-cta">
+        <a class="btn-modern" href="{{ site.url }}{{ site.baseurl }}/datasets">Explore our datasets →</a>
+        <a class="btn-ghost" href="{{ site.url }}{{ site.baseurl }}/team">Meet the team</a>
+      </div>
+    </div>
+    <figure class="hero-figure">
+      <img src="{{ site.url }}{{ site.baseurl }}/images/livia_team_pic/livia-lab-group.jpg" alt="The LIVIA lab team" onerror="this.style.display='none';this.parentNode.classList.add('no-img');" />
+      <figcaption>The LIVIA team at ÉTS, Montréal</figcaption>
+    </figure>
+  </div>
 
-	{{ content }}
+  <div class="stat-band">
+    <div class="stat"><div class="num">14</div><div class="label">Faculty &amp; researchers</div></div>
+    <div class="stat"><div class="num">40+</div><div class="label">Graduate students</div></div>
+    <div class="stat"><div class="num">6</div><div class="label">Core research axes</div></div>
+    <div class="stat"><div class="num">2</div><div class="label">Public benchmark datasets</div></div>
   </div>
-  <div id="newsid" class="col-sm-4" >
-	{% include news.html %}
-  </div>
+</section>
+
+<div id="homeid" class="col-sm-12">
+{{ content }}
+</div>

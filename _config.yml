@@ -6,10 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: The Allan Lab
-email: your-email@domain.com
+title: LIVIA — Imaging, Vision & Artificial Intelligence Lab
+email: eric.granger@etsmtl.ca
 description: > # this means to ignore newlines until "baseurl:"
-  Website of the AllanLab.
+  LIVIA, the Laboratory of Imaging, Vision and Artificial Intelligence at
+  École de technologie supérieure (ÉTS), Université du Québec, Montréal —
+  research in computer vision, machine learning and AI.
 baseurl: ""
 url: ""
 

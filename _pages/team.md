@@ -1,196 +1,63 @@
 ---
-title: "Allan Lab - Team"
+title: "LIVIA — Team"
 layout: gridlay
-excerpt: "Allan Lab: Team members"
+excerpt: "LIVIA Lab: faculty, researchers, students and alumni."
 sitemap: false
 permalink: /team/
 ---
 
-<!-- # Group Members -->
-# Members
+<section class="section-tight">
+<div class="section-head">
+<div class="kicker">Our people</div>
+<h1 style="margin-bottom:10px;">The LIVIA Team</h1>
+<p>A diverse group of faculty, researchers and graduate students working across computer vision, machine learning and artificial intelligence. <strong>We are recruiting</strong> — <a href="{{ site.url }}{{ site.baseurl }}/vacancies">see open positions</a>.</p>
+</div>
+</section>
 
- **We are  looking for new PhD students, Postdocs, and Master students to join the team** [(see openings)]({{ site.url }}{{ site.baseurl }}/vacancies) **!**
+<section class="section-tight">
+<div class="section-head"><div class="kicker">Faculty &amp; Researchers</div><h2>Professors &amp; principal investigators</h2></div>
 
-
-<!-- Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-students), [alumni](#alumni), [administrative support](#administrative-support), [lab visitors](#lab-visitors). -->
-
-<!-- ## Members -->
-{% assign number_printed = 0 %}
+<div class="team-grid">
 {% for member in site.data.team_members %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
-
-<div class="col-sm-6 clearfix">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/livia_team_pic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
-  <h4>{{ member.name }}</h4>
-  <i>{{ member.info }} <!--<br>email: <{{ member.email }}></i> -->
-  <ul style="overflow: hidden">
-
-  {% if member.number_educ == 1 %}
-  <li> {{ member.education1 }} </li>
-  {% endif %}
-
-  {% if member.number_educ == 2 %}
-  <li> {{ member.education1 | markdownify}} </li>
-  <li> {{ member.education2 | markdownify}} </li>
-  {% endif %}
-
-  {% if member.number_educ == 3 %}
-  <li> {{ member.education1 | markdownify}} </li>
-  <li> {{ member.education2 | markdownify}} </li>
-  <li> {{ member.education3 | markdownify}} </li>
-  {% endif %}
-
-  {% if member.number_educ == 4 %}
-  <li> {{ member.education1 | markdownify}} </li>
-  <li> {{ member.education2 | markdownify}} </li>
-  <li> {{ member.education3 | markdownify}} </li>
-  <li> {{ member.education4 | markdownify}} </li>
-  {% endif %}
-
-  {% if member.number_educ == 5 %}
-  <li> {{ member.education1 | markdownify}} </li>
-  <li> {{ member.education2 | markdownify}} </li>
-  <li> {{ member.education3 | markdownify}} </li>
-  <li> {{ member.education4 | markdownify}} </li>
-  <li> {{ member.education5 | markdownify}} </li>
-  {% endif %}
-
-  </ul>
+<div class="member">
+<div class="member-photo">
+<img src="{{ site.url }}{{ site.baseurl }}/images/livia_team_pic/{{ member.photo }}" alt="{{ member.name }}" />
 </div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
+<div class="member-body">
+<h4>{{ member.name }}</h4>
+<span class="member-role">{{ member.info }}</span>
+<ul>
+{% if member.number_educ >= 1 %}<li>{{ member.education1 }}</li>{% endif %}
+{% if member.number_educ >= 2 %}<li>{{ member.education2 }}</li>{% endif %}
+{% if member.number_educ >= 3 %}<li>{{ member.education3 }}</li>{% endif %}
+{% if member.number_educ >= 4 %}<li>{{ member.education4 }}</li>{% endif %}
+</ul>
 </div>
-{% endif %}
-
+</div>
 {% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
 </div>
-{% endif %}
+</section>
 
-
-
-
-<!--## Master and Bachelor Students
-{% assign number_printed = 0 %}
+<section class="section-tight">
+<div class="section-head"><div class="kicker">Graduate Students &amp; Staff</div><h2>Current students &amp; research staff</h2></div>
+<div class="roster">
 {% for member in site.data.students %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
-
-<div class="col-sm-6 clearfix">
-  <h4>{{ member.name }}</h4>
-  <i>{{ member.info }} --> <!-- <br>email: <{{ member.email }}></i> -->
-  <!-- <ul style="overflow: hidden">
-
-  {% if member.number_educ == 1 %}
-  <li> {{ member.education1 }} </li>
-  {% endif %}
-
-  {% if member.number_educ == 2 %}
-  <li> {{ member.education1 }} </li>
-  <li> {{ member.education2 }} </li>
-  {% endif %}
-
-  {% if member.number_educ == 3 %}
-  <li> {{ member.education1 }} </li>
-  <li> {{ member.education2 }} </li>
-  <li> {{ member.education3 }} </li>
-  {% endif %}
-
-  {% if member.number_educ == 4 %}
-  <li> {{ member.education1 }} </li>
-  <li> {{ member.education2 }} </li>
-  <li> {{ member.education3 }} </li>
-  <li> {{ member.education4 }} </li>
-  {% endif %}
-
-  </ul>
+<div class="roster-item">
+<div class="rn">{{ member.name }}</div>
+<div class="rr">{{ member.role }}</div>
 </div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
 {% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
 </div>
-{% endif %}
+</section>
 
-
-## Alumni
-
-{% assign number_printed = 0 %}
+<section class="section-tight">
+<div class="section-head"><div class="kicker">Alumni</div><h2>Where they started</h2></div>
+<div class="roster">
 {% for member in site.data.alumni_members %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
-
-<div class="col-sm-6 clearfix">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/livia_team_pic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
-  <h4>{{ member.name }}</h4>
-  <i>{{ member.duration }} <br> Role: {{ member.info }}</i>
-  <ul style="overflow: hidden">
-
-  </ul>
+<div class="roster-item">
+<div class="rn">{{ member.name }}</div>
+<div class="rr">{{ member.role }}</div>
 </div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
-{% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
-</div>
-{% endif %} -->
-<!-- 
-## Former visitors, BSc/ MSc students
-<div class="row">
-<div class="col-sm-4 clearfix">
-<h4>Visitors</h4>
-{% for member in site.data.alumni_visitors %}
-{{ member.name }}
-{% endfor %}
-</div> -->
-
-<!-- <div class="col-sm-4 clearfix">
-<h4>Master students</h4>
-{% for member in site.data.alumni_msc %}
-{{ member.name }}
 {% endfor %}
 </div>
-
-<div class="col-sm-4 clearfix">
-<h4>Bachelor Students</h4>
-{% for member in site.data.alumni_bsc %}
-{{ member.name }}
-{% endfor %}
-</div> 
-
-</div> -->
-
-<!-- 
-## Administrative Support
-<a href="mailto:Rijsewijk@Physics.LeidenUniv.nl">Ellie van Rijsewijk</a> is helping us (and other groups) with administration. -->
+</section>

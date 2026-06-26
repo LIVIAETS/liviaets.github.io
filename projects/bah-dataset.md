@@ -49,6 +49,32 @@ Eric Granger<sup>1</sup>**
 
 <br />
 
+<div class="callout" markdown="0">
+<span class="callout-tag">★ Open Challenge · ECCV 2026</span>
+<h3>3rd AH Video Recognition Challenge — ABAW 11th @ ECCV 2026</h3>
+<p>The <strong>BAH dataset</strong> powers the <strong>3rd edition of the Ambivalence/Hesitancy (AH) Video Recognition Challenge</strong>, part of the 11th Workshop and Competition on Affective &amp; Behavior Analysis in-the-Wild (ABAW) at <strong>ECCV 2026</strong>. Registered teams get access to the BAH data — <strong>300 participants, 1,427 videos</strong> with rich annotations — to develop expression-recognition methods.</p>
+<p><strong>This edition's task:</strong> predict ambivalence/hesitancy at the <em>video level</em> — is there ambivalence/hesitancy in a given video? The top 3 winning teams contribute paper(s) describing their approach and make their code public; accepted papers will be part of the <strong>ECCV 2026 proceedings</strong>.</p>
+
+<h4 style="margin-top:1.4rem;">Key dates</h4>
+<ul class="timeline">
+<li><span class="tl-date">Jul 10, 2026</span><span class="tl-evt">Test set release</span></li>
+<li><span class="tl-date">Jul 16, 2026</span><span class="tl-evt">Final submission — predictions, code &amp; ArXiv paper</span></li>
+<li><span class="tl-date">Jul 18, 2026</span><span class="tl-evt">Winners announcement</span></li>
+<li><span class="tl-date">Jul 20, 2026</span><span class="tl-evt">Final paper submission deadline</span></li>
+<li><span class="tl-date">Aug 10, 2026</span><span class="tl-evt">Review decisions / notification of acceptance</span></li>
+<li><span class="tl-date">Aug 15, 2026</span><span class="tl-evt">Camera-ready version</span></li>
+</ul>
+
+<p style="margin-top:1.2rem;">
+<a class="btn-modern" href="https://sbelharbi.github.io/otherdocs/abaw-11th-ah-3rd/Call--Ambivalence-Hesitancy-AH-Video-Recognition-Challenge-3rd--ABAW11th-ECCV-2026.pdf" target="_blank" rel="noopener">Register &amp; read the full call →</a>
+&nbsp;
+<a class="btn-ghost" href="https://affective-behavior-analysis-in-the-wild.github.io/11th" target="_blank" rel="noopener">ABAW 11th website</a>
+</p>
+<p style="font-size:0.9rem;color:var(--muted);margin-bottom:0;">All participating teams must register. Solutions from the previous (2nd) edition are available on <a href="https://arxiv.org/pdf/2605.27451" target="_blank" rel="noopener">arXiv</a>. Organizing team: Eric Granger, Alessandro Lameiras Koerich, Marco Pedersoli, Simon Bacon.</p>
+</div>
+
+<br />
+
 
 {% assign lb = "{" %}
 {% assign rb = "}" %}
