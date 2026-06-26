@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eric Granger — Professor &amp; Director of LIVIA · ÉTS Montréal</title>
+  <meta name="description" content="Eric Granger — Full Professor, Department of Systems Engineering, ÉTS Montréal, and Director of LIVIA. Computer vision, machine learning, biometrics, medical imaging and affective computing.">
+  <meta name="theme-color" content="#6366f1">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <script>(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}document.documentElement.classList.add("js");})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <div class="reading-progress"></div>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="nav-brand" href="/"><img src="/images/brand/livia-logo.svg" alt="LIVIA"></a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/team.html">Team</a></li>
+        <li><a href="/datasets.html">Datasets</a></li>
+        <li><a class="nav-chip" href="/datasets/bah-challenge.html" title="3rd AH Recognition Challenge — ABAW 11th @ ECCV 2026">★ AH Challenge</a></li>
+        <li><a href="/join.html">Join</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle theme"></button>
+        <button class="icon-btn nav-burger" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="profile-hero">
+      <canvas id="hero-canvas"></canvas>
+      <div class="wrap">
+        <div class="profile-inner">
+          <div class="profile-photo reveal"><img src="/images/livia_team_pic/Granger.jpg" alt="Eric Granger"></div>
+          <div class="reveal" data-d="1">
+            <span class="profile-eyebrow"><span style="width:7px;height:7px;border-radius:50%;background:#22d3ee;display:inline-block"></span> Director · LIVIA</span>
+            <h1>Eric Granger</h1>
+            <div class="profile-title">Full Professor, Department of Systems Engineering — ÉTS Montréal</div>
+            <p class="profile-sub">Building computer-vision and machine-learning systems that are accurate, adaptive and trustworthy — for healthcare, biometrics, surveillance and intelligent embedded systems.</p>
+            <div class="profile-actions">
+              <a class="btn btn-primary" href="mailto:eric.granger@etsmtl.ca">Email Eric &rarr;</a>
+              <a class="btn btn-ghost" href="https://www.etsmtl.ca/en/study-at-ets/professors/egranger" target="_blank" rel="noopener">ÉTS profile</a>
+              <a class="btn btn-ghost" href="https://www.etsmtl.ca/en/labs/livia" target="_blank" rel="noopener">LIVIA</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="section tight">
+      <div class="wrap">
+        <div class="stats reveal">
+          <div class="stat"><div class="n grad-text" data-target="76" data-suffix="+">0</div><div class="l">Journal papers</div></div>
+          <div class="stat"><div class="n grad-text" data-target="171" data-suffix="+">0</div><div class="l">Conference papers</div></div>
+          <div class="stat"><div class="n grad-text" data-target="30" data-suffix="+">0</div><div class="l">Doctoral theses supervised</div></div>
+          <div class="stat"><div class="n grad-text" data-target="7">0</div><div class="l">Book chapters</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" style="padding-top:30px">
+      <div class="wrap">
+        <div class="head reveal"><div class="kicker">About</div><h2>Bridging vision, learning &amp; real-world impact</h2></div>
+        <div class="reveal" style="max-width:760px">
+          <p style="font-size:1.07rem;line-height:1.85;color:var(--text);margin-bottom:1.2em">Eric Granger is a Full Professor in the Department of Systems Engineering at the École de technologie supérieure (ÉTS), Université du Québec, and the <strong>Director of LIVIA</strong> — the Laboratory of Imaging, Vision and Artificial Intelligence. His research develops machine-learning and deep-learning models for computer vision and pattern recognition, with a focus on systems that remain reliable when deployed in the messy conditions of the real world.</p>
+          <p style="font-size:1.07rem;line-height:1.85;color:var(--text);margin-bottom:1.2em">A recurring theme of his work is learning from data with <strong>limited annotations</strong> — through domain adaptation, transfer learning, weak supervision and multimodal information fusion — applied to high-stakes domains such as medical imaging, biometric authentication, video surveillance and affective computing for health. He holds a B.Sc.A. from UQAM and an M.Sc.A. and Ph.D. from Polytechnique Montréal, and has supervised <strong>30+ doctoral theses</strong> alongside numerous master's projects.</p>
+          <p style="font-size:1.07rem;line-height:1.85;color:var(--text);margin:0">He leads and contributes to several research chairs and institutes spanning embedded AI for connected buildings, digital health, and international learning-systems research.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH INTERESTS -->
+    <section class="section alt">
+      <div class="wrap">
+        <div class="head reveal"><div class="kicker">Research interests</div><h2>What Eric works on</h2></div>
+        <div class="grid g3">
+          <div class="card reveal"><div class="ic">&#9673;</div><h4>Computer Vision &amp; Pattern Recognition</h4><p>Recognition, detection and analysis in images and video, including facial analysis.</p></div>
+          <div class="card reveal" data-d="1"><div class="ic">&#9672;</div><h4>Deep &amp; Machine Learning</h4><p>Deep neural networks and adaptive classification frameworks for real-world data.</p></div>
+          <div class="card reveal" data-d="2"><div class="ic">&#9670;</div><h4>Face Recognition &amp; Biometrics</h4><p>Video-based identification and biometric authentication systems.</p></div>
+          <div class="card reveal"><div class="ic">&#10070;</div><h4>Domain Adaptation &amp; Transfer Learning</h4><p>Models that generalize and personalize across users and shifting conditions.</p></div>
+          <div class="card reveal" data-d="1"><div class="ic">&#9829;</div><h4>Medical Imaging &amp; Affective Computing</h4><p>Health technologies, emotion recognition and computer-assisted diagnosis.</p></div>
+          <div class="card reveal" data-d="2"><div class="ic">&#11041;</div><h4>Multimodal Fusion &amp; Surveillance</h4><p>Combining vision, audio and signals; intelligent video-surveillance systems.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROLES & CHAIRS -->
+    <section class="section">
+      <div class="wrap">
+        <div class="head reveal"><div class="kicker">Leadership &amp; affiliations</div><h2>Roles &amp; research chairs</h2></div>
+        <div class="grid g2">
+          <div class="role-item reveal"><span class="ri">&#9733;</span><div><h4>Director — LIVIA</h4><p>Leads the Laboratory of Imaging, Vision and Artificial Intelligence at ÉTS.</p></div></div>
+          <div class="role-item reveal" data-d="1"><span class="ri">&#9881;</span><div><h4>Distech Controls Research Chair</h4><p>Embedded Neural Networks for Connected Building Control.</p></div></div>
+          <div class="role-item reveal"><span class="ri">&#9877;</span><div><h4>FRQS co-Chair — AI &amp; Digital Health</h4><p>Advancing artificial intelligence for health technologies.</p></div></div>
+          <div class="role-item reveal" data-d="1"><span class="ri">&#9783;</span><div><h4>ILLS &amp; itechsanté</h4><p>Member of the International Laboratory on Learning Systems (CNRS–FRQ) and the Research Institute for Innovation in Health Technologies.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK -->
+    <section class="section alt">
+      <div class="wrap">
+        <div class="head reveal"><div class="kicker">Selected work</div><h2>Recent datasets &amp; benchmarks</h2></div>
+        <div class="ds-grid">
+          <article class="ds-card reveal">
+            <a class="ds-thumb" href="/datasets/bah.html"><img src="/material/bah-dataset/demo.png" alt="BAH dataset" loading="lazy"></a>
+            <div class="ds-b">
+              <span class="venue">ICLR 2026 · ABAW @ ECCV 2026</span>
+              <h3>BAH — Ambivalence / Hesitancy in Videos</h3>
+              <p>A first multimodal video dataset for recognizing ambivalence and hesitancy for digital behavioural-change interventions.</p>
+              <div class="ds-links"><a class="pri" href="/datasets/bah.html">Read more</a><a href="https://arxiv.org/pdf/2505.19328" target="_blank" rel="noopener">Paper</a></div>
+            </div>
+          </article>
+          <article class="ds-card reveal" data-d="1">
+            <a class="ds-thumb" href="/datasets/sr-caco-2.html"><img src="/material/sr-caco-2/patch-demo.png" alt="SR-CACO-2 dataset" loading="lazy"></a>
+            <div class="ds-b">
+              <span class="venue">NeurIPS 2024</span>
+              <h3>SR-CACO-2 — Microscopy Super-Resolution</h3>
+              <p>A large benchmark of real low-/high-resolution confocal microscopy pairs for single-image super-resolution.</p>
+              <div class="ds-links"><a class="pri" href="/datasets/sr-caco-2.html">Read more</a><a href="https://arxiv.org/pdf/2406.09168" target="_blank" rel="noopener">Paper</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION + CONTACT -->
+    <section class="section">
+      <div class="wrap">
+        <div class="grid g2" style="align-items:start;gap:48px">
+          <div class="reveal">
+            <div class="kicker">Education</div>
+            <h2 style="font-size:1.6rem;margin:12px 0 22px">Academic background</h2>
+            <ul class="vtimeline">
+              <li><div class="vt-h">Ph.D. — Engineering</div><div class="vt-s">Polytechnique Montréal</div></li>
+              <li><div class="vt-h">M.Sc.A.</div><div class="vt-s">Polytechnique Montréal</div></li>
+              <li><div class="vt-h">B.Sc.A.</div><div class="vt-s">Université du Québec à Montréal (UQAM)</div></li>
+            </ul>
+          </div>
+          <div class="reveal" data-d="1">
+            <div class="kicker">Contact</div>
+            <h2 style="font-size:1.6rem;margin:12px 0 22px">Get in touch</h2>
+            <div class="role-item" style="margin-bottom:12px"><span class="ri">&#9993;</span><div><h4>Email</h4><p><a href="mailto:eric.granger@etsmtl.ca">eric.granger@etsmtl.ca</a></p></div></div>
+            <div class="role-item" style="margin-bottom:12px"><span class="ri">&#127970;</span><div><h4>Office</h4><p>F-5088 · 1100 Notre-Dame St W, Montréal, QC H3C 1K3</p></div></div>
+            <div class="role-item"><span class="ri">&#128279;</span><div><h4>Profiles</h4><p><a href="https://www.etsmtl.ca/en/study-at-ets/professors/egranger" target="_blank" rel="noopener">ÉTS</a> · <a href="https://www.etsmtl.ca/en/labs/livia" target="_blank" rel="noopener">LIVIA</a></p></div></div>
+          </div>
+        </div>
+        <div class="reveal" style="margin-top:34px"><a class="btn btn-ghost" href="/team.html">&larr; Back to the team</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <span class="fb">LIVIA</span>
+          <p>Laboratoire d'Imagerie, de Vision et d'Intelligence Artificielle — at the École de technologie supérieure (ÉTS), Université du Québec, Montréal.</p>
+          <a class="fets" href="https://www.etsmtl.ca/" target="_blank" rel="noopener"><img src="/images/brand/ets-logo.svg" alt="ÉTS"></a>
+        </div>
+        <div class="fcol">
+          <h5>Explore</h5>
+          <a href="/">Home</a><a href="/team.html">Team</a><a href="/datasets.html">Datasets</a><a href="/join.html">Join Us</a>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <p>1100 Notre-Dame St W<br>Montréal, QC H3C 1K3, Canada<br><a href="mailto:eric.granger@etsmtl.ca">eric.granger@etsmtl.ca</a></p>
+        </div>
+      </div>
+      <div class="fbot"><span>© 2026 LIVIA — ÉTS, Université du Québec.</span><span>Made in Montréal</span></div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
