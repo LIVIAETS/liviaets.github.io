@@ -1,18 +1,13 @@
 ---
-title: "LIVIA Lab - Vacancies"
+title: "LIVIA — Vacancies"
+heading: "Open Positions"
+kicker: "Join the lab"
+subtitle: "We are looking for motivated PhD students, postdoctoral researchers and Master's students to join LIVIA and work at the frontier of computer vision and AI."
 layout: textlay
-excerpt: "Openings"
+excerpt: "Open positions at the LIVIA lab — PhD, postdoc and Master's opportunities."
 sitemap: false
 permalink: /vacancies
 ---
-
-<section class="section-tight">
-<div class="section-head">
-<div class="kicker">Join the lab</div>
-<h1 style="margin-bottom:10px;">Open Positions</h1>
-<p>We are looking for motivated PhD students, postdoctoral researchers and Master's students to join LIVIA and work at the frontier of computer vision and AI.</p>
-</div>
-</section>
 
 ## We are recruiting!
 
@@ -34,8 +29,6 @@ If you are interested in joining LIVIA as a PhD student, postdoctoral researcher
 
 **[https://www.etsmtl.ca/en/labs/livia/recrutement](https://www.etsmtl.ca/en/labs/livia/recrutement)**
 
----
-
 ### Why Join LIVIA?
 
 You will have the chance to work on cutting-edge research in artificial intelligence and computer vision, often at the intersection of theory and real-world applications. You will be involved in:
@@ -49,7 +42,3 @@ You will have the chance to work on cutting-edge research in artificial intellig
 ### About Montréal
 
 Montréal is recognized as a global leader in AI research and innovation, home to world-renowned research institutes and a vibrant tech ecosystem. Join us in one of the most exciting cities for AI research!
-
-<!-- <figure>
-<img src="{{ site.url }}{{ site.baseurl }}/images/picpic/Gallery/DSC_0696.jpg" width="95%">
-</figure> -->
