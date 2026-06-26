@@ -279,6 +279,22 @@ section { position: relative; }
 .roster-item .rn { font-weight: 600; color: var(--heading); font-size: .95rem; }
 .roster-item .rr { font-size: .8rem; color: var(--muted); }
 
+/* People grid (students / alumni with photos) */
+.people { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+.person { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.person:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: rgba(139,92,246,.3); }
+.person .av { aspect-ratio: 1/1; overflow: hidden; background: var(--bg-2); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: center; }
+.person .av img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(12%); transition: transform .4s ease, filter .3s ease; }
+.person:hover .av img { transform: scale(1.05); filter: none; }
+.person .av.ph { background: var(--grad); }
+.person .av .ini { font-family: var(--f-display); font-weight: 800; font-size: 1.7rem; letter-spacing: .02em; color: #fff; }
+.person .body { padding: 12px 12px 14px; text-align: center; }
+.person .pn { font-weight: 600; font-size: .9rem; color: var(--heading); line-height: 1.25; }
+.person .pr { font-size: .76rem; color: var(--muted); margin-top: 3px; }
+@media (max-width: 1024px) { .people { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 720px) { .people { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 460px) { .people { grid-template-columns: repeat(2, 1fr); } }
+
 /* ---------- Page hero (interior pages) ---------- */
 .page-hero { padding: 130px 0 50px; position: relative; overflow: hidden; border-bottom: 1px solid var(--border); }
 .page-hero::after {
