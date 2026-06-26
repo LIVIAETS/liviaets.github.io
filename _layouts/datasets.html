@@ -2,7 +2,20 @@
 layout: default
 ---
 
-  <div id="homeid" class="col-sm-12">
-  <h1>{{ page.title }}</h1>
+<section class="ds-hero">
+  <div class="ds-hero-inner">
+    <div class="kicker" style="color:var(--brand-2);">Dataset &amp; Benchmark</div>
+    <h1 style="margin-bottom:14px;">{{ page.title }}</h1>
+    {% if page.tags %}
+    <div class="tagchips">
+      {% for tag in page.tags limit:10 %}<span>{{ tag }}</span>{% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
 
-	{{ content }}
+<div id="homeid" class="col-sm-12">
+  <article class="ds-article">
+{{ content }}
+  </article>
+</div>

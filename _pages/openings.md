@@ -6,7 +6,13 @@ sitemap: false
 permalink: /vacancies
 ---
 
-# Open positions
+<section class="section-tight">
+<div class="section-head">
+<div class="kicker">Join the lab</div>
+<h1 style="margin-bottom:10px;">Open Positions</h1>
+<p>We are looking for motivated PhD students, postdoctoral researchers and Master's students to join LIVIA and work at the frontier of computer vision and AI.</p>
+</div>
+</section>
 
 ## We are recruiting!
 

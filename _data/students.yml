@@ -1,11 +1,78 @@
-#- name:
-#  photo: rock.jpg
-#  info:
-#  email:
-#  number_educ:
-#  education1:
-#  education2:
-#  education3:
-#  education4:
+# Current students & research staff (LIVIA)
+- name: Soufiane Belharbi
+  role: Postdoctoral Fellow
 
+- name: Muhammad Osama Zeeshan
+  role: Ph.D. — Machine Learning
 
+- name: Muhammad Haseeb Aslam
+  role: Ph.D. — Systems Engineering
+
+- name: Gnana Praveen R
+  role: Ph.D.
+
+- name: Heitor Rapela Medeiros
+  role: Ph.D.
+
+- name: Jonathan de Matos
+  role: Ph.D.
+
+- name: Jerome Rony
+  role: Ph.D.
+
+- name: Madhu Kiran
+  role: Ph.D.
+
+- name: Karthik Gopinath
+  role: Ph.D.
+
+- name: Hoel Kervadec
+  role: Ph.D.
+
+- name: Le Thanh Nguyen-Meidine
+  role: Ph.D.
+
+- name: Imtiaz Ziko
+  role: Ph.D.
+
+- name: Malik Boudiaf
+  role: Ph.D.
+
+- name: Odilon Allognon
+  role: Ph.D.
+
+- name: Thiago Paixão
+  role: Ph.D.
+
+- name: Saypraseuth Mounsaveng
+  role: Ph.D.
+
+- name: Akhil P. M.
+  role: Ph.D.
+
+- name: Mohammad Esmaeilpour
+  role: Ph.D.
+
+- name: Sajjad Abdoli
+  role: Ph.D.
+
+- name: Farzad Beizaee
+  role: M.Sc.
+
+- name: Faramarz Farhangian
+  role: M.Sc. — Artificial Intelligence
+
+- name: Mohsen Benlazreg
+  role: M.Sc.
+
+- name: Félix Rémigereau
+  role: M.Sc.
+
+- name: Djebril Mekhazni
+  role: M.Sc.
+
+- name: Maximilien Dufau
+  role: M.Sc.
+
+- name: Julien Nicolas
+  role: Research — LOG-TI

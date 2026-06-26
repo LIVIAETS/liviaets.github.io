@@ -1,25 +1,37 @@
-<div id="footer" class="panel">
+<div id="footer">
   <div class="panel-footer">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-4">
-
-          <p>&copy 2025 LIVIA-ETS Lab. </a></p>
-              
-
-
-           <p>  </p><p>
-
-
+        <div class="col-sm-5">
+          <span class="foot-brand">LIVIA</span>
+          <p>Laboratoire d'Imagerie, de Vision et d'Intelligence Artificielle — a computer vision, machine learning &amp; AI research lab at the École de technologie supérieure (ÉTS), Université du Québec, Montréal.</p>
+          <a href="https://www.etsmtl.ca/" target="_blank" rel="noopener" class="foot-ets">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/brand/ets-logo.svg" alt="École de technologie supérieure (ÉTS)" />
+          </a>
+        </div>
+        <div class="col-sm-3">
+          <h5>Explore</h5>
+          <p>
+            <a href="{{ site.url }}{{ site.baseurl }}/">Home</a><br />
+            <a href="{{ site.url }}{{ site.baseurl }}/team">Team</a><br />
+            <a href="{{ site.url }}{{ site.baseurl }}/datasets">Datasets</a><br />
+            <a href="{{ site.url }}{{ site.baseurl }}/vacancies">Join Us</a><br />
+            <a href="https://www.etsmtl.ca/en/labs/livia" target="_blank" rel="noopener">ÉTS · LIVIA</a>
+          </p>
         </div>
         <div class="col-sm-4">
-        <p>We are part of the <a href="https://www.etsmtl.ca/">École de technologie supérieure (ÉTS)</a>, <a href="https://www.uquebec.ca/">Université du Québec</a>. The laboratory is dedicated to research in computer vision, machine learning, and artificial intelligence.</p>
+          <h5>Contact</h5>
+          <p>
+            Pavillon Principal (A), Room A-3600<br />
+            1100 Notre-Dame St W<br />
+            Montréal, QC H3C 1K3, Canada<br />
+            <a href="mailto:eric.granger@etsmtl.ca">eric.granger@etsmtl.ca</a>
+          </p>
         </div>
-        <div class="col-sm-4">
-          Contact:<br />
-          1100 Notre-Dame St W<br />
-          Montreal, QC H3C 1K3<br />
-          Canada <br />
+      </div>
+      <div class="row">
+        <div class="col-sm-12 foot-bottom">
+          &copy; {{ site.time | date: '%Y' }} LIVIA — ÉTS, Université du Québec. All rights reserved.
         </div>
       </div>
     </div>
