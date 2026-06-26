@@ -8079,9 +8079,18 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
+.stat .num sup {
+  font-size: 0.5em;
+  -webkit-text-fill-color: currentColor;
+}
+
 .stat .label {
   font-size: 0.9rem;
   color: var(--muted);
+}
+
+.stat .label sup {
+  font-size: 0.7em;
 }
 
 /* ---------- Cards & grids ---------- */

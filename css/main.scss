@@ -266,7 +266,9 @@ main { display: block; }
   font-family: var(--font-display); font-weight: 800; font-size: 1.95rem; letter-spacing: -0.03em;
   background: var(--brand-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
+.stat .num sup { font-size: 0.5em; -webkit-text-fill-color: currentColor; }
 .stat .label { font-size: 0.9rem; color: var(--muted); }
+.stat .label sup { font-size: 0.7em; }
 
 /* ---------- Cards & grids ---------- */
 .grid { display: grid; gap: 22px; }
