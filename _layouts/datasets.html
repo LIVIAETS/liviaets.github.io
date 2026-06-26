@@ -1,21 +1,58 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
 
-<section class="ds-hero">
-  <div class="ds-hero-inner">
-    <div class="kicker" style="color:var(--brand-2);">Dataset &amp; Benchmark</div>
-    <h1 style="margin-bottom:14px;">{{ page.title }}</h1>
-    {% if page.tags %}
-    <div class="tagchips">
-      {% for tag in page.tags limit:10 %}<span>{{ tag }}</span>{% endfor %}
-    </div>
-    {% endif %}
-  </div>
-</section>
+  {% include head.html %}
 
-<div id="homeid" class="col-sm-12">
-  <article class="ds-article">
-{{ content }}
-  </article>
-</div>
+  <body>
+
+    {% include header.html %}
+
+    <main id="main">
+
+      <section class="ds-hero">
+        <div class="wrap">
+          <div class="kicker reveal">Dataset &amp; Benchmark</div>
+          <h1 class="reveal" style="margin-bottom:0;">{{ page.title }}</h1>
+          {% if page.tags %}
+          <div class="tagchips reveal">
+            {% for tag in page.tags limit:10 %}<span>{{ tag }}</span>{% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </section>
+
+      {% if page.challenge %}
+      <section class="section" style="padding-bottom:0;">
+        <div class="wrap">
+          <div class="callout reveal">
+            <span class="callout-tag">&#9733; {{ page.challenge.tag }}</span>
+            <h3>{{ page.challenge.title }}</h3>
+            <p>{{ page.challenge.intro }}</p>
+            <p>{{ page.challenge.task }}</p>
+            <h4 style="margin-top:1.4rem;">Key dates</h4>
+            <ul class="timeline">
+              {% for d in page.challenge.dates %}
+              <li><span class="tl-date">{{ d.d }}</span><span class="tl-evt">{{ d.e }}</span></li>
+              {% endfor %}
+            </ul>
+            <div class="callout-cta">
+              <a class="btn-modern" href="{{ page.challenge.register_url }}" target="_blank" rel="noopener">Register &amp; read the full call &rarr;</a>
+              <a class="btn-ghost" href="{{ page.challenge.abaw_url }}" target="_blank" rel="noopener">ABAW 11th website</a>
+            </div>
+            <p style="font-size:0.9rem;color:var(--muted);margin-top:18px;margin-bottom:0;">{{ page.challenge.note }}</p>
+          </div>
+        </div>
+      </section>
+      {% endif %}
+
+      <article class="ds-article">
+        {{ content }}
+      </article>
+
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

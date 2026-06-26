@@ -12,12 +12,15 @@
       </a>
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{ site.url }}{{ site.baseurl }}/">Home</a></li>
-        <li><a href="{{ site.url }}{{ site.baseurl }}/team">Team</a></li>
-        <li><a href="{{ site.url }}{{ site.baseurl }}/datasets">Datasets</a></li>
-        <li><a href="{{ site.url }}{{ site.baseurl }}/vacancies">Join Us</a></li>
-      </ul>
+      <div class="navbar-nav-wrap navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href="{{ site.url }}{{ site.baseurl }}/">Home</a></li>
+          <li><a href="{{ site.url }}{{ site.baseurl }}/team">Team</a></li>
+          <li><a href="{{ site.url }}{{ site.baseurl }}/datasets">Datasets</a></li>
+          <li><a href="{{ site.url }}{{ site.baseurl }}/vacancies">Join Us</a></li>
+        </ul>
+        <button type="button" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light and dark theme" title="Toggle theme"></button>
+      </div>
     </div>
   </div>
 </div>

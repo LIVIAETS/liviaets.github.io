@@ -1,25 +1,23 @@
 <div id="footer">
-  <div class="panel-footer">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-5">
+  <div class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
           <span class="foot-brand">LIVIA</span>
           <p>Laboratoire d'Imagerie, de Vision et d'Intelligence Artificielle — a computer vision, machine learning &amp; AI research lab at the École de technologie supérieure (ÉTS), Université du Québec, Montréal.</p>
           <a href="https://www.etsmtl.ca/" target="_blank" rel="noopener" class="foot-ets">
             <img src="{{ site.url }}{{ site.baseurl }}/images/brand/ets-logo.svg" alt="École de technologie supérieure (ÉTS)" />
           </a>
         </div>
-        <div class="col-sm-3">
+        <div class="foot-links">
           <h5>Explore</h5>
-          <p>
-            <a href="{{ site.url }}{{ site.baseurl }}/">Home</a><br />
-            <a href="{{ site.url }}{{ site.baseurl }}/team">Team</a><br />
-            <a href="{{ site.url }}{{ site.baseurl }}/datasets">Datasets</a><br />
-            <a href="{{ site.url }}{{ site.baseurl }}/vacancies">Join Us</a><br />
-            <a href="https://www.etsmtl.ca/en/labs/livia" target="_blank" rel="noopener">ÉTS · LIVIA</a>
-          </p>
+          <a href="{{ site.url }}{{ site.baseurl }}/">Home</a>
+          <a href="{{ site.url }}{{ site.baseurl }}/team">Team</a>
+          <a href="{{ site.url }}{{ site.baseurl }}/datasets">Datasets</a>
+          <a href="{{ site.url }}{{ site.baseurl }}/vacancies">Join Us</a>
+          <a href="https://www.etsmtl.ca/en/labs/livia" target="_blank" rel="noopener">ÉTS · LIVIA</a>
         </div>
-        <div class="col-sm-4">
+        <div>
           <h5>Contact</h5>
           <p>
             Pavillon Principal (A), Room A-3600<br />
@@ -29,10 +27,8 @@
           </p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-12 foot-bottom">
-          &copy; {{ site.time | date: '%Y' }} LIVIA — ÉTS, Université du Québec. All rights reserved.
-        </div>
+      <div class="foot-bottom">
+        &copy; {{ site.time | date: '%Y' }} LIVIA — ÉTS, Université du Québec. All rights reserved.
       </div>
     </div>
   </div>
@@ -40,3 +36,28 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="{{ site.url }}{{ site.baseurl }}/js/bootstrap.min.js"></script>
+<script>
+  function toggleTheme() {
+    var root = document.documentElement;
+    var cur = root.getAttribute('data-theme');
+    var sysDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var next = cur ? (cur === 'dark' ? 'light' : 'dark') : (sysDark ? 'light' : 'dark');
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  }
+
+  // Reveal-on-scroll
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || !els.length) {
+      els.forEach && els.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>

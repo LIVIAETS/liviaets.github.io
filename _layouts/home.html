@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <main id="main">
+
+      <!-- Hero -->
+      <section class="hero">
+        <div class="wrap">
+          <div class="hero-inner">
+            <div class="hero-copy reveal">
+              <span class="hero-eyebrow">Computer Vision &amp; AI Research · ÉTS Montréal</span>
+              <h1>Teaching machines to see, understand &amp; reason</h1>
+              <p class="lead">LIVIA — the Laboratory of Imaging, Vision and Artificial Intelligence — advances computer vision, deep learning and trustworthy AI for healthcare, security and beyond.</p>
+              <div class="hero-cta">
+                <a class="btn-modern" href="{{ site.url }}{{ site.baseurl }}/datasets">Explore our datasets &rarr;</a>
+                <a class="btn-ghost" href="{{ site.url }}{{ site.baseurl }}/team">Meet the team</a>
+              </div>
+            </div>
+            <figure class="hero-figure reveal">
+              <img src="{{ site.url }}{{ site.baseurl }}/images/livia_team_pic/livia-lab-group.jpg" alt="The LIVIA lab team" onerror="this.style.display='none';this.parentNode.classList.add('no-img');" />
+              <figcaption>The LIVIA team at ÉTS, Montréal</figcaption>
+            </figure>
+          </div>
+
+          <div class="stat-band reveal">
+            <div class="stat"><div class="num">14</div><div class="label">Faculty &amp; researchers</div></div>
+            <div class="stat"><div class="num">40+</div><div class="label">Graduate students</div></div>
+            <div class="stat"><div class="num">6</div><div class="label">Core research axes</div></div>
+            <div class="stat"><div class="num">2</div><div class="label">Public benchmark datasets</div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Research axes -->
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="kicker">Who we are</div>
+            <h2>Perception &amp; modeling of dynamic environments</h2>
+            <p>The unifying theme of LIVIA is the perception and modeling of dynamic environments — 2D and 3D scenes, video, speech and more — turning massive, weakly-annotated data into reliable, deployable systems.</p>
+          </div>
+          <div class="grid grid-3 reveal">
+            <div class="card-m"><div class="icon">&#9672;</div><h4>Machine Learning</h4><p>Deep, self- and weakly-supervised learning, domain adaptation and learning under limited annotations.</p></div>
+            <div class="card-m"><div class="icon">&#9673;</div><h4>Computer Vision</h4><p>Recognition, detection, segmentation and super-resolution across natural, medical and microscopy imagery.</p></div>
+            <div class="card-m"><div class="icon">&#9670;</div><h4>Pattern Recognition</h4><p>Biometrics, classifier ensembles and dynamic selection for robust decision-making.</p></div>
+            <div class="card-m"><div class="icon">&#10070;</div><h4>Adaptive &amp; Intelligent Systems</h4><p>Models that adapt to users and shifting conditions in real-time, resource-limited settings.</p></div>
+            <div class="card-m"><div class="icon">&#11041;</div><h4>Information Fusion</h4><p>Multimodal fusion of vision, audio, language and physiological signals for richer understanding.</p></div>
+            <div class="card-m"><div class="icon">&#10038;</div><h4>Optimization of Complex Systems</h4><p>Convex and combinatorial optimization, evolutionary and multi-objective methods.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Impact -->
+      <section class="section alt">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="kicker">Impact</div>
+            <h2>Solving concrete, high-stakes problems</h2>
+            <p>LIVIA's methods tackle real, complex problems — convolutional and transformer networks that detect tumors or assess depression from massive, sparsely-annotated data.</p>
+          </div>
+          <div class="pill-row reveal">
+            <span class="pill">Medical, satellite &amp; aerial image analysis</span>
+            <span class="pill">Biometrics — face, signature, voice</span>
+            <span class="pill">Handwritten document processing</span>
+            <span class="pill">Affective computing for health</span>
+            <span class="pill">Security &amp; surveillance</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- News -->
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="kicker">Latest news</div>
+            <h2>What's happening at LIVIA</h2>
+          </div>
+          <div class="grid reveal" style="gap:14px;">
+            {% for article in site.data.news limit:6 %}
+            <div class="news-card">
+              <div class="date">{{ article.date }}</div>
+              <p>{{ article.headline }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+      <!-- Recruiting -->
+      <section class="section alt">
+        <div class="wrap">
+          <div class="section-head center reveal">
+            <div class="kicker">Join us</div>
+            <h2>We're recruiting passionate researchers</h2>
+            <p>We are looking for motivated PhD students, postdocs and Master's students to help shape the future of computer vision and AI.</p>
+            <p style="margin-top:22px;"><a class="btn-modern" href="{{ site.url }}{{ site.baseurl }}/vacancies">See open positions &rarr;</a></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners -->
+      <section class="section-tight">
+        <div class="wrap">
+          <p class="kicker text-center reveal" style="text-align:center;">Affiliations &amp; partners</p>
+          <figure class="sponsors reveal">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/brand/ets-logo.svg" alt="École de technologie supérieure (ÉTS)" style="height:60px;">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/brand/livia-logo.svg" alt="LIVIA" style="height:38px;">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/gentec.png" alt="Gentec">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/distech.png" alt="Distech">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Diagnos.png" alt="Diagnos">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/zebra.jpeg" alt="Zebra">
+          </figure>
+        </div>
+      </section>
+
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
