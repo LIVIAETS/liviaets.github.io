@@ -145,7 +145,20 @@
     on(); window.addEventListener("scroll", on, { passive: true });
   }
 
+  /* ---- Reading progress bar (blog pages) ---- */
+  function initProgress() {
+    var bar = document.querySelector(".reading-progress");
+    if (!bar) return;
+    function on() {
+      var h = document.documentElement;
+      var max = h.scrollHeight - h.clientHeight;
+      var p = max > 0 ? (h.scrollTop || document.body.scrollTop) / max : 0;
+      bar.style.width = (p * 100).toFixed(2) + "%";
+    }
+    on(); window.addEventListener("scroll", on, { passive: true }); window.addEventListener("resize", on);
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
-    initNav(); initReveal(); initCounters(); initHero(); initActive(); initScroll();
+    initNav(); initReveal(); initCounters(); initHero(); initActive(); initScroll(); initProgress();
   });
 })();
