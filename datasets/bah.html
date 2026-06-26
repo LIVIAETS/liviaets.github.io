@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BAH Dataset — Ambivalence / Hesitancy Recognition in Videos · LIVIA</title>
-  <meta name="description" content="The BAH dataset: the first multimodal, subject-based video dataset for ambivalence/hesitancy (A/H) recognition for digital behavioural change. Powers the 3rd AH Challenge at ABAW 11th, ECCV 2026.">
+  <meta name="description" content="The BAH dataset: the first multimodal, subject-based video dataset for ambivalence/hesitancy (A/H) recognition for digital behavioural change. 300 participants, 1,427 videos. Powers the 3rd AH Challenge at ABAW 11th, ECCV 2026.">
   <meta name="theme-color" content="#6366f1">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
+
+  <div class="reading-progress"></div>
 
   <header class="nav">
     <div class="wrap">
@@ -33,102 +35,109 @@
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="wrap reveal">
+    <section class="blog-hero">
+      <div class="read reveal">
         <div class="kicker">Dataset &amp; Benchmark · ICLR 2026</div>
         <h1>BAH — Ambivalence / Hesitancy Recognition in Videos</h1>
-        <p>A first multimodal, subject-based video dataset for recognizing ambivalence and hesitancy (A/H) in real-world videos, designed for personalized digital behavioural-change interventions.</p>
+        <p class="sub">The first multimodal, subject-based video dataset built to teach machines a remarkably human signal: the quiet moment when someone is of two minds.</p>
+        <div class="meta">
+          <span>&#128338; <b>~8 min</b> read</span>
+          <span>&#128101; <b>300</b> participants</span>
+          <span>&#127909; <b>1,427</b> videos</span>
+          <span>&#9733; <b>ABAW @ ECCV 2026</b> challenge</span>
+        </div>
       </div>
     </section>
 
-    <article class="article">
-      <p class="authors reveal"><strong>Manuela González-González</strong><sup>3,4</sup>, Soufiane Belharbi<sup>1</sup>, Muhammad Osama Zeeshan<sup>1</sup>, Masoumeh Sharafi<sup>1</sup>, Muhammad Haseeb Aslam<sup>1</sup>, Alessandro Lameiras Koerich<sup>2</sup>, Marco Pedersoli<sup>1</sup>, Simon L. Bacon<sup>3,4</sup>, Eric Granger<sup>1</sup></p>
-      <p class="affil reveal"><sup>1</sup> LIVIA, Dept. of Systems Engineering, ÉTS Montréal &nbsp;·&nbsp; <sup>2</sup> LIVIA, Dept. of Software &amp; IT Engineering, ÉTS Montréal &nbsp;·&nbsp; <sup>3</sup> Dept. of Health, Kinesiology &amp; Applied Physiology, Concordia University &nbsp;·&nbsp; <sup>4</sup> Montreal Behavioural Medicine Centre, CIUSSS-NIM</p>
+    <article class="post">
+      <div class="read">
 
-      <div class="badges reveal">
-        <a href="https://github.com/LIVIAETS/bah-dataset?tab=readme-ov-file#-bah-dataset-download-" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Dataset%20Download-blue?logo=openaccess" alt="Download"></a>
-        <a href="https://arxiv.org/pdf/2505.19328" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/arXiv-2505.19328-b31b1b.svg?logo=arxiv&logoColor=B31B1B" alt="arXiv"></a>
-        <a href="https://github.com/LIVIAETS/bah-dataset" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Github-bah--dataset-brightgreen.svg?logo=github" alt="GitHub"></a>
-        <a href="https://huggingface.co/sbelharbi/bah-dataset" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Weights-yellow" alt="Hugging Face"></a>
-      </div>
+        <p class="authorline reveal"><strong>Manuela González-González</strong><sup>3,4</sup>, Soufiane Belharbi<sup>1</sup>, Muhammad Osama Zeeshan<sup>1</sup>, Masoumeh Sharafi<sup>1</sup>, Muhammad Haseeb Aslam<sup>1</sup>, Alessandro Lameiras Koerich<sup>2</sup>, Marco Pedersoli<sup>1</sup>, Simon L. Bacon<sup>3,4</sup>, Eric Granger<sup>1</sup></p>
+        <p class="affil reveal"><sup>1</sup> LIVIA, Dept. of Systems Engineering, ÉTS Montréal &nbsp;·&nbsp; <sup>2</sup> LIVIA, Dept. of Software &amp; IT Engineering, ÉTS Montréal &nbsp;·&nbsp; <sup>3</sup> Dept. of Health, Kinesiology &amp; Applied Physiology, Concordia University &nbsp;·&nbsp; <sup>4</sup> Montreal Behavioural Medicine Centre, CIUSSS-NIM</p>
 
-      <div class="fig reveal"><a href="/material/bah-dataset/demo.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/demo.png" alt="BAH dataset demo"></a></div>
+        <div class="badges reveal">
+          <a href="https://github.com/LIVIAETS/bah-dataset?tab=readme-ov-file#-bah-dataset-download-" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Dataset%20Download-blue?logo=openaccess" alt="Download"></a>
+          <a href="https://arxiv.org/pdf/2505.19328" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/arXiv-2505.19328-b31b1b.svg?logo=arxiv&logoColor=B31B1B" alt="arXiv"></a>
+          <a href="https://github.com/LIVIAETS/bah-dataset" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Github-bah--dataset-brightgreen.svg?logo=github" alt="GitHub"></a>
+          <a href="https://huggingface.co/sbelharbi/bah-dataset" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Weights-yellow" alt="Hugging Face"></a>
+        </div>
 
-      <!-- Slim challenge banner -> dedicated page -->
-      <a class="challenge-banner reveal" href="/datasets/bah-challenge.html">
-        <span class="cb-tag">&#9733; ECCV 2026</span>
-        <span class="cb-body">
-          <strong>3rd AH Video Recognition Challenge — ABAW 11th</strong>
-          <span class="cb-sub">Now open for registration · test set releases Jul 10, 2026</span>
-        </span>
-        <span class="cb-arrow">View challenge details &rarr;</span>
-      </a>
+        <a class="challenge-banner reveal" href="/datasets/bah-challenge.html">
+          <span class="cb-tag">&#9733; ECCV 2026</span>
+          <span class="cb-body">
+            <strong>3rd AH Video Recognition Challenge — ABAW 11th</strong>
+            <span class="cb-sub">Now open for registration · test set releases Jul 10, 2026</span>
+          </span>
+          <span class="cb-arrow">View challenge details &rarr;</span>
+        </a>
 
-      <h2 class="reveal">At a glance</h2>
-      <div class="metrics reveal">
-        <div class="metric"><div class="n grad-text">224</div><div class="l">Participants (9 provinces)</div></div>
-        <div class="metric"><div class="n grad-text">1,118</div><div class="l">Videos · 8.26 h total</div></div>
-        <div class="metric"><div class="n grad-text">1.5 h</div><div class="l">Annotated A/H</div></div>
-        <div class="metric"><div class="n grad-text">1,274</div><div class="l">A/H segments</div></div>
-      </div>
-      <p class="reveal" style="color:var(--muted);font-size:.92rem">Figures describe the published dataset (arXiv 2505.19328). The version used for the ABAW 11th challenge has been expanded to 300 participants and 1,427 videos.</p>
+        <div class="figure reveal"><a class="frame" href="/material/bah-dataset/demo.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/demo.png" alt="Examples of BAH videos"></a><figcaption>Sample frames from BAH — short webcam answers captured in real, in-the-wild conditions.</figcaption></div>
 
-      <h2 class="reveal">Abstract</h2>
-      <p class="reveal">Recognizing complex emotions linked to ambivalence and hesitancy (A/H) can play a critical role in the personalization and effectiveness of digital behaviour-change interventions. These subtle and conflicting emotions are manifested by a discord between multiple modalities, such as facial and vocal expressions and body language. Although experts can be trained to identify A/H, integrating them into digital interventions is costly and less effective. Automatic learning systems provide a cost-effective alternative that can adapt to individual users and operate seamlessly within real-time, resource-limited environments. However, there are currently no datasets available for the design of ML models to recognize A/H.</p>
-      <p class="reveal">This paper introduces a first <strong>Behavioural Ambivalence/Hesitancy (BAH)</strong> dataset collected for subject-based multimodal recognition of A/H in videos. It contains videos from <strong>224 participants</strong> captured across <strong>9 provinces in Canada</strong>, with different ages and ethnicities. Through our web platform, we recruited participants to answer <strong>7 questions</strong>, some designed to elicit A/H, while recording themselves via webcam and microphone. BAH amounts to <strong>1,118 videos</strong> for a total duration of <strong>8.26 hours</strong> with <strong>1.5 hours of A/H</strong>. Our behavioural team annotated timestamp segments indicating where A/H occurs, providing frame- and video-level annotations with A/H cues. Video transcripts and their timestamps are also included, along with cropped and aligned faces in each frame and a variety of participant meta-data.</p>
-      <p class="reveal">Additionally, the paper provides preliminary benchmarking results for baseline models at frame- and video-level recognition with mono- and multi-modal setups. It also includes results on zero-shot prediction and personalization using unsupervised domain adaptation. The limited performance of baseline models highlights the challenges of recognizing A/H in real-world videos. The data, code, and pretrained weights are available on <a href="https://github.com/LIVIAETS/bah-dataset" target="_blank" rel="noopener">GitHub</a>.</p>
+        <p class="lead-para reveal">Ambivalence and hesitancy are the number-one reasons people delay, avoid, or abandon a change to their health behaviour. They are subtle, conflicting emotions — a person caught between acceptance and refusal — and they leak out as a discord between the face, the voice and the body. <strong>BAH</strong> is the first dataset built to recognize that signal automatically, in video.</p>
 
-      <h2 class="reveal">License &amp; download</h2>
-      <p class="reveal">The BAH dataset is licensed under a <strong>proprietary license for research only</strong>. To request the dataset, please follow the instructions in the <a href="https://github.com/LIVIAETS/bah-dataset?tab=readme-ov-file#-bah-dataset-download-" target="_blank" rel="noopener">repository download section</a>.</p>
-      <div class="fig reveal"><a href="/material/bah-dataset/nutrition-label.jpg" target="_blank" rel="noopener"><img src="/material/bah-dataset/nutrition-label.jpg" alt="BAH dataset nutrition label"></a><figcaption>Dataset "nutrition label" — composition and annotation summary.</figcaption></div>
+        <h2 class="reveal"><span class="nm">01 — Motivation</span>Why ambivalence &amp; hesitancy matter</h2>
+        <p class="reveal">When a clinician sits across from a patient, they can read hesitation in a half-second pause or a flicker of doubt. Digital behaviour-change interventions — the apps and online programs that increasingly deliver health support — are blind to it. Training human experts to spot ambivalence and hesitancy (A/H) works, but embedding that expertise into software at scale is costly and far less effective.</p>
+        <p class="reveal">Automatic A/H recognition is therefore the missing piece for <strong>personalized, cost-effective</strong> digital health: a model that notices when a user is wavering can adapt its message in the moment. The obstacle has been simple — until now, <strong>no dataset existed</strong> to train such a model.</p>
+        <p class="pullquote reveal">A/H sets a person in a state between positive and negative orientations — between acceptance and refusal — and shows up as a discord in affect across face, voice and body.</p>
 
-      <h2 class="reveal">Capture &amp; annotation</h2>
-      <p class="reveal">Participants used our web platform to record themselves answering seven questions, some specifically designed to elicit ambivalence and hesitancy. The behavioural team then annotated timestamped segments at both frame and video level, with the underlying A/H cues. Aligned face crops and time-aligned transcripts accompany every video.</p>
-      <div class="fig reveal"><a href="/material/bah-dataset/data-capturing.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/data-capturing.png" alt="Data capturing pipeline"></a><figcaption>The web-based capture and annotation pipeline.</figcaption></div>
-      <div class="fig reveal"><a href="/material/bah-dataset/7-questions.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/7-questions.png" alt="The seven questions"></a><figcaption>The seven questions used to elicit A/H.</figcaption></div>
+        <h2 class="reveal"><span class="nm">02 — The dataset</span>What's inside BAH</h2>
+        <p class="reveal">BAH was collected to mirror real-world digital interventions delivered online. Through a web platform, <strong>300 participants from across Canada</strong> recorded themselves on webcam answering a set of predefined questions — several of them deliberately designed to elicit ambivalence and hesitancy. The result is a corpus of natural, low-production, in-the-wild video that looks exactly like what an intervention would actually receive.</p>
+        <div class="keyfacts reveal">
+          <div class="kf"><b>300</b><span>participants across Canada</span></div>
+          <div class="kf"><b>1,427</b><span>videos · 10.60 hours total</span></div>
+          <div class="kf"><b>3</b><span>expert annotators</span></div>
+          <div class="kf"><b>2</b><span>levels — frame &amp; video</span></div>
+        </div>
+        <p class="reveal">Three experts annotated every recording, marking the <strong>timestamps</strong> where A/H occurs and providing both <strong>frame-level and video-level</strong> labels along with the underlying A/H cues. Because ambivalence and hesitancy manifest so similarly in practice, the released labels are <strong>binary</strong> — A/H present, or absent. Each video also ships with its <strong>transcript</strong>, <strong>cropped and aligned face crops</strong> for every frame, and per-participant <strong>metadata</strong>.</p>
+        <div class="figure reveal"><a class="frame" href="/material/bah-dataset/nutrition-label.jpg" target="_blank" rel="noopener"><img src="/material/bah-dataset/nutrition-label.jpg" alt="BAH dataset nutrition label"></a><figcaption>The dataset "nutrition label" — composition, modalities and annotation at a glance.</figcaption></div>
 
-      <h2 class="reveal">Variability &amp; demographics</h2>
-      <p class="reveal">The dataset approximates the demographic distribution of sex and provincial representation in Canada. Participants span <strong>nine provinces</strong> — 31.2% from British Columbia, 20.5% from Alberta and 16.5% from Quebec — and a wide age range from <strong>18 to 66 years</strong>. By sex, 59.8% are male and 39.3% female; by ethnicity, 52.2% White, 21.0% Asian, 11.6% Mixed and 10.3% Black. Notably, <strong>65.2% are not students</strong>, limiting common recruitment bias.</p>
-      <p class="reveal">Each participant could record up to seven videos (96 recorded all seven), averaging ~5 videos/participant and ~2.84 videos with A/H. In total there are <strong>1,274 A/H segments</strong> across 376 videos with multiple segments and 259 with a single segment. Segments are brief — on average 4.25 ± 2.47 seconds (102.92 ± 59.16 frames) — ranging from a single frame (0.01 s) to 23.8 seconds.</p>
-      <div class="fig reveal"><a href="/material/bah-dataset/variability-1.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/variability-1.png" alt="Variability 1"></a></div>
-      <div class="fig reveal"><a href="/material/bah-dataset/variability-3.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/variability-3.png" alt="Variability 3"></a></div>
-      <div class="fig reveal"><a href="/material/bah-dataset/variability-5.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/variability-5.png" alt="Variability 5"></a></div>
+        <h2 class="reveal"><span class="nm">03 — Capture</span>How the recordings were made</h2>
+        <p class="reveal">Participants completed the study entirely online. Each answered up to seven predefined questions while recording themselves via webcam and microphone — a setup chosen specifically so the data reflects the noise, lighting and framing of genuine at-home interventions rather than a controlled lab. The questions were scripted to gently surface moments of doubt and conflict.</p>
+        <div class="figure reveal"><a class="frame" href="/material/bah-dataset/data-capturing.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/data-capturing.png" alt="Capture and annotation pipeline"></a><figcaption>The web-based capture and expert-annotation pipeline.</figcaption></div>
+        <div class="figure reveal"><a class="frame" href="/material/bah-dataset/7-questions.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/7-questions.png" alt="The seven questions"></a><figcaption>The prompts used to elicit ambivalence and hesitancy.</figcaption></div>
 
-      <h2 class="reveal">Experimental protocol</h2>
-      <p class="reveal"><strong>Splits.</strong> The dataset is divided by participant into train, validation and test sets — train+validation hold 3/4 of participants and test holds 1/4. All videos from a participant belong to a single set, enabling subject-based learning scenarios. Ready-to-use splits are provided at video and frame level.</p>
-      <p class="reveal"><strong>Imbalance.</strong> The data is highly imbalanced — at frame level only 18.15% contains A/H — which must be accounted for during training and evaluation.</p>
-      <p class="reveal"><strong>Metrics.</strong> With the positive class indicating presence of A/H, we report the <strong>F1 score of the positive class</strong>, <strong>weighted F1 (WF1)</strong>, and <strong>average precision (AP)</strong> of the positive class (threshold sweep 0–1, step 0.001). Evaluation code is provided.</p>
-      <div class="fig reveal"><a href="/material/bah-dataset/dataset-split.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/dataset-split.png" alt="Dataset splits"></a><figcaption>Train / validation / test split statistics.</figcaption></div>
-      <div class="fig reveal"><a href="/material/bah-dataset/dataset-imbalance.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/dataset-imbalance.png" alt="Dataset imbalance"></a><figcaption>Class imbalance at frame and video level.</figcaption></div>
+        <h2 class="reveal"><span class="nm">04 — Diversity</span>Who's in the dataset</h2>
+        <p class="reveal">A model that only works for one kind of person is no use in a public-health setting, so BAH was built for breadth. Participants span <strong>multiple Canadian provinces</strong>, a wide <strong>age range</strong>, both sexes, and diverse ethnic backgrounds — and, importantly, a majority who are <strong>not students</strong>, which sidesteps a common recruitment bias in affective-computing datasets. Crucially, A/H episodes themselves are <strong>brief</strong> — often only a few seconds — and a single video may contain several, which makes precise temporal localization genuinely hard.</p>
+        <div class="figure reveal"><a class="frame" href="/material/bah-dataset/variability-1.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/variability-1.png" alt="Participant variability"></a></div>
+        <div class="figure reveal"><a class="frame" href="/material/bah-dataset/variability-3.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/variability-3.png" alt="Participant variability"></a><figcaption>Demographic and recording variability across the cohort.</figcaption></div>
 
-      <h2 class="reveal">Baseline benchmarks</h2>
-      <h3 class="reveal">Frame-level multimodal classification</h3>
-      <div class="fig reveal"><a href="/material/bah-dataset/multimodal.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/multimodal.png" alt="Multimodal architecture"></a></div>
-      <div class="fig reveal"><a href="/material/bah-dataset/frame-multimodal.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/frame-multimodal.png" alt="Frame-level multimodal results"></a></div>
-      <h3 class="reveal">Video-level classification</h3>
-      <div class="fig reveal"><a href="/material/bah-dataset/video-performance.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/video-performance.png" alt="Video-level performance"></a></div>
-      <h3 class="reveal">Zero-shot prediction</h3>
-      <div class="fig reveal"><a href="/material/bah-dataset/zero-shot-video.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/zero-shot-video.png" alt="Zero-shot video performance"></a></div>
-      <h3 class="reveal">Personalization via domain adaptation</h3>
-      <div class="fig reveal"><a href="/material/bah-dataset/personalization-da.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/personalization-da.png" alt="Personalization via domain adaptation"></a></div>
+        <h2 class="reveal"><span class="nm">05 — Protocol</span>Splits, imbalance &amp; metrics</h2>
+        <p class="reveal">BAH is split <strong>by participant</strong> — every video from a person lives in exactly one of the train, validation or test sets — so models are always evaluated on people they have never seen. This subject-based design makes the benchmark honest, and the released split files are ready to use at both video and frame level.</p>
+        <p class="reveal">The data is also deliberately, realistically <strong>imbalanced</strong>: A/H is the exception, not the rule, so the positive class is rare at frame level. Evaluation therefore leans on metrics that respect imbalance — the <strong>F1 score of the positive class</strong>, a <strong>weighted F1</strong>, and <strong>average precision</strong> — all with evaluation code provided.</p>
+        <div class="figure reveal"><a class="frame" href="/material/bah-dataset/dataset-split.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/dataset-split.png" alt="Dataset splits"></a><figcaption>Train / validation / test split statistics.</figcaption></div>
+        <div class="figure reveal"><a class="frame" href="/material/bah-dataset/dataset-imbalance.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/dataset-imbalance.png" alt="Class imbalance"></a><figcaption>Class imbalance at frame and video level — A/H is rare.</figcaption></div>
 
-      <h2 class="reveal">Conclusion</h2>
-      <p class="reveal">BAH is a new and unique multimodal, subject-based video dataset for A/H recognition. Recruited participants answer seven designed questions to elicit A/H while recording via webcam and microphone, annotated by our behavioural team at video and frame level. Initial benchmarking yields limited performance, highlighting the difficulty of A/H recognition — and showing that leveraging context, multimodality and adapted feature fusion is a promising first direction. The dataset and code are public.</p>
+        <h2 class="reveal"><span class="nm">06 — Benchmarks</span>How far do baselines get?</h2>
+        <p class="reveal">To map the difficulty, the paper benchmarks baseline models across several setups — frame- and video-level recognition, mono- and multi-modal inputs, zero-shot prediction, and personalization through unsupervised domain adaptation. The headline result is sobering and useful: <strong>baselines struggle</strong>. That gap is exactly the point — it shows that recognizing A/H in real video needs purpose-built multimodal and spatio-temporal models, not off-the-shelf classifiers.</p>
+        <h3 class="reveal">Frame-level, multimodal</h3>
+        <div class="figure reveal"><a class="frame" href="/material/bah-dataset/multimodal.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/multimodal.png" alt="Multimodal architecture"></a></div>
+        <div class="figure reveal"><a class="frame" href="/material/bah-dataset/frame-multimodal.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/frame-multimodal.png" alt="Frame-level multimodal results"></a></div>
+        <h3 class="reveal">Video-level recognition</h3>
+        <div class="figure reveal"><a class="frame" href="/material/bah-dataset/video-performance.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/video-performance.png" alt="Video-level performance"></a></div>
+        <h3 class="reveal">Zero-shot &amp; personalization</h3>
+        <p class="reveal">Beyond supervised baselines, BAH supports zero-shot prediction and per-user adaptation — because the most useful intervention is one that learns an individual's particular way of hesitating.</p>
+        <div class="figure reveal"><a class="frame" href="/material/bah-dataset/zero-shot-video.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/zero-shot-video.png" alt="Zero-shot performance"></a></div>
+        <div class="figure reveal"><a class="frame" href="/material/bah-dataset/personalization-da.png" target="_blank" rel="noopener"><img src="/material/bah-dataset/personalization-da.png" alt="Personalization via domain adaptation"></a><figcaption>Personalizing to individual users via unsupervised domain adaptation.</figcaption></div>
 
-      <h2 class="reveal">Acknowledgments</h2>
-      <p class="reveal">Supported in part by the Fonds de recherche du Québec – Santé, the Natural Sciences and Engineering Research Council of Canada, the Canada Foundation for Innovation, and the Digital Research Alliance of Canada. We thank the annotation interns Jessica Almeida (Concordia University, UQÀM) and Laura Lucia Ortiz (MBMC).</p>
+        <h2 class="reveal"><span class="nm">07 — Takeaways</span>Why this is hard — and worth it</h2>
+        <p class="reveal">BAH is unique: a multimodal, subject-based video dataset for a complex affective signal that has never had a benchmark before. The limited baseline performance isn't a disappointment — it's a map of the open problems. Leveraging context, fusing modalities, and modelling time are the directions the data points toward, and every piece needed to pursue them — data, code and pretrained weights — is public.</p>
 
-      <h2 class="reveal">Citation</h2>
-      <pre class="reveal"><code>@article{gonzalez-25-bah,
+        <h2 class="reveal"><span class="nm">08 — Access</span>Get the data</h2>
+        <p class="reveal">BAH is released under a <strong>proprietary license for research only</strong>. To request access, follow the instructions in the <a href="https://github.com/LIVIAETS/bah-dataset?tab=readme-ov-file#-bah-dataset-download-" target="_blank" rel="noopener">repository download section</a>. Code and pretrained weights are on <a href="https://github.com/LIVIAETS/bah-dataset" target="_blank" rel="noopener">GitHub</a> and <a href="https://huggingface.co/sbelharbi/bah-dataset" target="_blank" rel="noopener">Hugging Face</a>. Building a model for the challenge? Start with the <a href="/datasets/bah-challenge.html">ABAW 11th challenge page</a>.</p>
+
+        <h2 class="reveal"><span class="nm">09 — Cite</span>Citation</h2>
+        <pre class="reveal"><code>@article{gonzalez-25-bah,
   title={BAH Dataset for Ambivalence/Hesitancy Recognition in
-         Videos for Behavioural Change},
+         Videos for Digital Behavioural Change},
   author={González-González, M. and Belharbi, S. and Zeeshan, M. O.
           and Sharafi, M. and Aslam, M. H. and Pedersoli, M. and
           Koerich, A. L. and Bacon, S. L. and Granger, E.},
-  journal={CoRR},
-  volume={abs/2505.19328},
+  journal={arXiv preprint arXiv:2505.19328},
   year={2025}
 }</code></pre>
+        <p class="affil reveal" style="margin-top:24px">Acknowledgments — supported in part by the Fonds de recherche du Québec – Santé, NSERC, the Canada Foundation for Innovation, and the Digital Research Alliance of Canada. Thanks to annotation interns Jessica Almeida (Concordia, UQÀM) and Laura Lucia Ortiz (MBMC).</p>
+
+      </div>
     </article>
   </main>
 
@@ -142,7 +151,7 @@
         </div>
         <div class="fcol">
           <h5>Explore</h5>
-          <a href="/">Home</a><a href="/team.html">Team</a><a href="/datasets.html">Datasets</a><a href="/join.html">Join Us</a>
+          <a href="/">Home</a><a href="/team.html">Team</a><a href="/datasets.html">Datasets</a><a href="/datasets/bah-challenge.html">AH Challenge</a><a href="/join.html">Join Us</a>
         </div>
         <div>
           <h5>Contact</h5>
