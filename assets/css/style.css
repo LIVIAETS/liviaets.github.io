@@ -446,7 +446,9 @@ section { position: relative; }
 @media (max-width: 1140px) { .figure.wide { margin-left: 0; margin-right: 0; } }
 
 .post .callout { margin: 40px 0; }
-.post pre { margin: 8px 0 1.3em; }
+.post pre { background: #0a0c16; color: #dfe4f0; border: 1px solid var(--border); border-radius: var(--r-sm); padding: 16px 18px; overflow-x: auto; font-family: var(--f-mono); font-size: .8rem; line-height: 1.6; margin: 8px 0 1.3em; }
+.post pre code { font-family: var(--f-mono); font-size: inherit; background: none; border: 0; padding: 0; color: inherit; }
+.post code { font-family: var(--f-mono); font-size: .88em; color: var(--brand-3); background: var(--surface-2); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; }
 
 /* ===================================================================
    Person / profile page
