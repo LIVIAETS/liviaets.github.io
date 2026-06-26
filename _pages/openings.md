@@ -39,6 +39,15 @@ You will have the chance to work on cutting-edge research in artificial intellig
 - Collaborating with leading researchers and industry partners
 - Making discoveries that impact healthcare, security, and other critical domains
 
+### About ÉTS Montréal
+
+LIVIA is hosted at the École de technologie supérieure (ÉTS), an engineering school that is:
+
+- **1st in Québec** for student enrolment, and **2nd in Canada**
+- **25%** of Québec engineers are ÉTS graduates
+- **~100%** of graduates secure a job upon completing their diploma
+- **4,000** paid internships completed every year across **1,000** companies
+
 ### About Montréal
 
 Montréal is recognized as a global leader in AI research and innovation, home to world-renowned research institutes and a vibrant tech ecosystem. Join us in one of the most exciting cities for AI research!

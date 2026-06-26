@@ -90,15 +90,6 @@
   education3: Machine learning, Computer vision, Face recognition
   education4: Deep learning, Medical imaging, Video analytics
 
-- name: Tony Wong
-  photo: Wong.jpg
-  info: Professor, Department of Software Engineering and IT
-  email: tony.wong@etsmtl.ca
-  number_educ: 3
-  education1: Object-oriented analysis and design (UML, CASE tools)
-  education2: Parallel processing, Cluster computing
-  education3: Computational intelligence, Multi-objective optimization
-
 - name: Rafael Menelau Oliveira e Cruz
   photo: rafael_final.jpeg
   info: Professor, Department of Software Engineering and IT
