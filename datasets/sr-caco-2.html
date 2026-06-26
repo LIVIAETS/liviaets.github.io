@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SR-CACO-2 Dataset — Confocal Microscopy Super-Resolution · LIVIA</title>
+  <title>SR-CACO-2 Dataset · Confocal Microscopy Super-Resolution · LIVIA</title>
   <meta name="description" content="SR-CACO-2: a large-scale dataset for single-image super-resolution in confocal fluorescence microscopy. 2,200 images, 9,937 patches, three markers, three scales, 16 benchmarked methods. NeurIPS 2024.">
   <meta name="theme-color" content="#6366f1">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -25,7 +25,7 @@
         <li><a href="/">Home</a></li>
         <li><a href="/team.html">Team</a></li>
         <li><a href="/datasets.html">Datasets</a></li>
-        <li><a class="nav-chip" href="/datasets/bah-challenge.html" title="3rd AH Recognition Challenge — ABAW 11th @ ECCV 2026">★ AH Challenge</a></li>
+        <li><a class="nav-chip" href="/datasets/bah-challenge.html" title="3rd AH Recognition Challenge, ABAW 11th @ ECCV 2026">★ AH Challenge</a></li>
         <li><a href="/join.html">Join</a></li>
       </ul>
       <div class="nav-actions">
@@ -39,7 +39,7 @@
     <section class="blog-hero">
       <div class="read reveal">
         <div class="kicker">Dataset &amp; Benchmark · NeurIPS 2024</div>
-        <h1>SR-CACO-2 — Confocal Microscopy Super-Resolution</h1>
+        <h1>SR-CACO-2: Confocal Microscopy Super-Resolution</h1>
         <p class="sub">Can a neural network give microscopists a sharper image without frying their living cells? A large new benchmark of real low- and high-resolution microscopy pairs sets out to find out.</p>
         <div class="meta">
           <span>&#128338; <b>~8 min</b> read</span>
@@ -66,61 +66,61 @@
 
         <div class="figure reveal"><a class="frame" href="/material/sr-caco-2/patch-demo.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/patch-demo.png" alt="SR-CACO-2 low- and high-resolution patches"></a><figcaption>Real low-resolution inputs and their high-resolution targets across three fluorescent markers.</figcaption></div>
 
-        <p class="lead-para reveal">Confocal fluorescence microscopy is one of biology's most powerful windows into the living cell — but every photon comes at a price. Crank up the light for a crisp image and you bleach the dye and damage the specimen. <strong>SR-CACO-2</strong> asks whether super-resolution AI can buy back that quality, and gives the field a real benchmark to measure it on.</p>
+        <p class="lead-para reveal">Confocal fluorescence microscopy is one of biology's most powerful windows into the living cell, but every photon comes at a price. Crank up the light for a crisp image and you bleach the dye and damage the specimen. <strong>SR-CACO-2</strong> asks whether super-resolution AI can buy back that quality, and gives the field a real benchmark to measure it on.</p>
 
-        <h2 class="reveal"><span class="nm">01 — Motivation</span>The microscopist's dilemma</h2>
-        <p class="reveal">Scanning confocal microscopy captures beautiful images from thick, three-dimensional samples — but it relies on intense illumination. That light causes <strong>photobleaching</strong> (the fluorescent markers fade) and <strong>phototoxicity</strong> (the cells themselves are harmed), which is a serious problem for live-cell imaging. You can dial the light down to protect the sample, but you pay for it directly in image quality.</p>
-        <p class="reveal">Single-image super-resolution (SISR) offers a tempting escape: capture a fast, low-light, low-resolution image and let a model upscale it to a high-resolution one. SISR has been spectacularly successful on natural photos — largely because there are enormous public datasets to train on. Microscopy has had no such luxury, and that scarcity has quietly capped progress.</p>
-        <p class="pullquote reveal">The few existing SISR microscopy datasets are mostly private — so the methods that could most help biologists are the ones hardest to fairly evaluate.</p>
+        <h2 class="reveal"><span class="nm">01 · Motivation</span>The microscopist's dilemma</h2>
+        <p class="reveal">Scanning confocal microscopy captures beautiful images from thick, three-dimensional samples, but it relies on intense illumination. That light causes <strong>photobleaching</strong> (the fluorescent markers fade) and <strong>phototoxicity</strong> (the cells themselves are harmed), which is a serious problem for live-cell imaging. You can dial the light down to protect the sample, but you pay for it directly in image quality.</p>
+        <p class="reveal">Single-image super-resolution (SISR) offers a tempting escape: capture a fast, low-light, low-resolution image and let a model upscale it to a high-resolution one. SISR has been spectacularly successful on natural photos, largely because there are enormous public datasets to train on. Microscopy has had no such luxury, and that scarcity has quietly capped progress.</p>
+        <p class="pullquote reveal">The few existing SISR microscopy datasets are mostly private, so the methods that could most help biologists are the ones hardest to fairly evaluate.</p>
 
-        <h2 class="reveal"><span class="nm">02 — The dataset</span>What SR-CACO-2 provides</h2>
-        <p class="reveal">SR-CACO-2 is a large scanning-confocal dataset of low- and high-resolution image pairs, captured for <strong>three different fluorescent markers</strong> on the human epithelial cell line <strong>Caco-2</strong> (ATCC HTB-37). It is built to evaluate SISR at three upscaling levels — <strong>×2, ×4 and ×8</strong> — using <strong>real</strong> low-resolution images, not synthetic ones.</p>
+        <h2 class="reveal"><span class="nm">02 · The dataset</span>What SR-CACO-2 provides</h2>
+        <p class="reveal">SR-CACO-2 is a large scanning-confocal dataset of low- and high-resolution image pairs, captured for <strong>three different fluorescent markers</strong> on the human epithelial cell line <strong>Caco-2</strong> (ATCC HTB-37). It is built to evaluate SISR at three upscaling levels, <strong>×2, ×4 and ×8</strong>, using <strong>real</strong> low-resolution images, not synthetic ones.</p>
         <div class="keyfacts reveal">
           <div class="kf"><b>2,200</b><span>unique images (4 resolutions)</span></div>
           <div class="kf"><b>9,937</b><span>LR/HR patches</span></div>
           <div class="kf"><b>3</b><span>fluorescent markers</span></div>
           <div class="kf"><b>16</b><span>SISR methods benchmarked</span></div>
         </div>
-        <p class="reveal">From 2,200 unique fields of view captured at four resolutions, the team derived <strong>9,937 patches</strong> ready for SISR experiments, and benchmarked <strong>16 state-of-the-art methods</strong> spanning the main families of the field. Everything — data, code and pretrained weights — is released under a permissive <strong>CC BY-NC-SA 4.0</strong> license.</p>
-        <div class="figure reveal"><a class="frame" href="/material/sr-caco-2/nutrition-label.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/nutrition-label.png" alt="SR-CACO-2 nutrition label"></a><figcaption>The dataset "nutrition label" — markers, scales and patch composition.</figcaption></div>
+        <p class="reveal">From 2,200 unique fields of view captured at four resolutions, the team derived <strong>9,937 patches</strong> ready for SISR experiments, and benchmarked <strong>16 state-of-the-art methods</strong> spanning the main families of the field. Everything, data, code and pretrained weights, is released under a permissive <strong>CC BY-NC-SA 4.0</strong> license.</p>
+        <div class="figure reveal"><a class="frame" href="/material/sr-caco-2/nutrition-label.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/nutrition-label.png" alt="SR-CACO-2 nutrition label"></a><figcaption>The dataset "nutrition label", markers, scales and patch composition.</figcaption></div>
 
-        <h2 class="reveal"><span class="nm">03 — Capture</span>Built for real diversity</h2>
-        <p class="reveal">Acquisition was automated for both scale and rigour. Sets of 100 images were stitched into 10 × 10 tiles, so each of the 22 tiles represents 100 unique fields of view — and every image was captured at four resolutions for three markers. Collecting a single tile across all four resolutions takes <strong>12–16 hours</strong>. The 22 wells were drawn from four independent experiments, giving the dataset genuine biological diversity rather than 22 views of the same thing.</p>
+        <h2 class="reveal"><span class="nm">03 · Capture</span>Built for real diversity</h2>
+        <p class="reveal">Acquisition was automated for both scale and rigour. Sets of 100 images were stitched into 10 × 10 tiles, so each of the 22 tiles represents 100 unique fields of view, and every image was captured at four resolutions for three markers. Collecting a single tile across all four resolutions takes <strong>12 to 16 hours</strong>. The 22 wells were drawn from four independent experiments, giving the dataset genuine biological diversity rather than 22 views of the same thing.</p>
         <div class="figure reveal"><a class="frame" href="/material/sr-caco-2/data-capturing.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/data-capturing.png" alt="Acquisition pipeline"></a><figcaption>Automated multi-resolution acquisition.</figcaption></div>
-        <p class="reveal">An object-based analysis of the high-resolution fields reveals roughly <strong>16,800 multi-cellular objects</strong>. Grown in a 3D protein matrix, the cells form tissue-like cyst structures whose size spans two orders of magnitude — single-layered, multi-layered and solid phenotypes alike — a far richer range than the flat 2D cultures used in many other microscopy datasets.</p>
+        <p class="reveal">An object-based analysis of the high-resolution fields reveals roughly <strong>16,800 multi-cellular objects</strong>. Grown in a 3D protein matrix, the cells form tissue-like cyst structures whose size spans two orders of magnitude, single-layered, multi-layered and solid phenotypes alike, a far richer range than the flat 2D cultures used in many other microscopy datasets.</p>
         <div class="figure reveal"><a class="frame" href="/material/sr-caco-2/object-analysis.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/object-analysis.png" alt="Object analysis"></a><figcaption>Size and shape analysis of the cellular structures.</figcaption></div>
 
-        <h2 class="reveal"><span class="nm">04 — The key insight</span>Real low-res is not bicubic low-res</h2>
-        <p class="reveal">Most SISR research fakes its low-resolution inputs by bicubically downscaling the high-resolution image. SR-CACO-2 shows why that shortcut breaks down in microscopy. Comparing <strong>real</strong> (microscope) low-resolution images against bicubic ones, the differences are stark: real LR is noticeably <strong>noisier</strong> — it comes from a single scan, while the HR target is averaged over nine — and the two can differ wildly in pixel intensity, especially over the cells themselves. Bicubic LR, by contrast, is unnaturally smooth and even preserves structure it shouldn't.</p>
-        <p class="reveal">The takeaway is direct: <strong>bicubic LR cannot stand in for real LR</strong>. To build SISR models that survive deployment, you have to train and test on the real thing — which is exactly what SR-CACO-2 makes possible.</p>
-        <div class="figure reveal"><a class="frame" href="/material/sr-caco-2/interpolation-vs-microscope.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/interpolation-vs-microscope.png" alt="Real vs bicubic low-resolution"></a><figcaption>Real microscope LR vs. bicubic LR — different noise, different intensities.</figcaption></div>
+        <h2 class="reveal"><span class="nm">04 · The key insight</span>Real low-res is not bicubic low-res</h2>
+        <p class="reveal">Most SISR research fakes its low-resolution inputs by bicubically downscaling the high-resolution image. SR-CACO-2 shows why that shortcut breaks down in microscopy. Comparing <strong>real</strong> (microscope) low-resolution images against bicubic ones, the differences are stark: real LR is noticeably <strong>noisier</strong>, it comes from a single scan, while the HR target is averaged over nine, and the two can differ wildly in pixel intensity, especially over the cells themselves. Bicubic LR, by contrast, is unnaturally smooth and even preserves structure it shouldn't.</p>
+        <p class="reveal">The takeaway is direct: <strong>bicubic LR cannot stand in for real LR</strong>. To build SISR models that survive deployment, you have to train and test on the real thing, which is exactly what SR-CACO-2 makes possible.</p>
+        <div class="figure reveal"><a class="frame" href="/material/sr-caco-2/interpolation-vs-microscope.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/interpolation-vs-microscope.png" alt="Real vs bicubic low-resolution"></a><figcaption>Real microscope LR vs. bicubic LR, different noise, different intensities.</figcaption></div>
 
-        <h2 class="reveal"><span class="nm">05 — Structure</span>Patches &amp; distribution</h2>
+        <h2 class="reveal"><span class="nm">05 · Structure</span>Patches &amp; distribution</h2>
         <p class="reveal">High-resolution fields are tiled into patches, balanced so that training and evaluation see a representative spread of cellular content rather than mostly background.</p>
         <div class="figure reveal"><a class="frame" href="/material/sr-caco-2/patching.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/patching.png" alt="Patch extraction"></a></div>
         <div class="figure reveal"><a class="frame" href="/material/sr-caco-2/distribution.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/distribution.png" alt="Patch distribution"></a><figcaption>Patch extraction and content distribution.</figcaption></div>
 
-        <h2 class="reveal"><span class="nm">06 — Benchmarks</span>How well does SISR work here?</h2>
-        <p class="reveal">Sixteen leading SISR methods were trained and evaluated across the three scales. The verdict: <strong>limited success</strong>. Current models struggle to reproduce the high-resolution textures that matter biologically — confirming that SR-CACO-2 is a genuinely challenging problem, not a solved one dressed up as new.</p>
+        <h2 class="reveal"><span class="nm">06 · Benchmarks</span>How well does SISR work here?</h2>
+        <p class="reveal">Sixteen leading SISR methods were trained and evaluated across the three scales. The verdict: <strong>limited success</strong>. Current models struggle to reproduce the high-resolution textures that matter biologically, confirming that SR-CACO-2 is a genuinely challenging problem, not a solved one dressed up as new.</p>
         <div class="figure reveal"><a class="frame" href="/material/sr-caco-2/roi-perf.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/roi-perf.png" alt="Super-resolution performance"></a></div>
         <div class="figure reveal"><a class="frame" href="/material/sr-caco-2/prediction.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/prediction.png" alt="Super-resolution predictions"></a><figcaption>Predicted super-resolved images vs. ground truth.</figcaption></div>
 
-        <h2 class="reveal"><span class="nm">07 — Beyond pixels</span>Does it help the biology?</h2>
-        <p class="reveal">Image quality is only a proxy — what biologists care about is whether they can <strong>detect and segment cells</strong> reliably. So the benchmark goes further, evaluating super-resolved images on downstream cell-detection and segmentation tasks. Several methods produced promising results, hinting that SISR could meaningfully assist real analysis pipelines even where the raw textures aren't perfect.</p>
+        <h2 class="reveal"><span class="nm">07 · Beyond pixels</span>Does it help the biology?</h2>
+        <p class="reveal">Image quality is only a proxy, what biologists care about is whether they can <strong>detect and segment cells</strong> reliably. So the benchmark goes further, evaluating super-resolved images on downstream cell-detection and segmentation tasks. Several methods produced promising results, hinting that SISR could meaningfully assist real analysis pipelines even where the raw textures aren't perfect.</p>
         <div class="figure reveal"><a class="frame" href="/material/sr-caco-2/cell-detect-cell2.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/cell-detect-cell2.png" alt="Cell detection"></a></div>
         <div class="figure reveal"><a class="frame" href="/material/sr-caco-2/cell-segmentation.png" target="_blank" rel="noopener"><img src="/material/sr-caco-2/cell-segmentation.png" alt="Cell segmentation"></a><figcaption>Downstream cell detection and segmentation on super-resolved images.</figcaption></div>
 
-        <h2 class="reveal"><span class="nm">08 — Takeaways</span>Why it matters</h2>
-        <p class="reveal">SR-CACO-2 closes a real gap: a public, reproducible benchmark of <strong>real</strong> LR/HR microscopy pairs across three scales and three markers. Its difficulty is a feature — it gives the community honest ground to improve on. And the payoff reaches beyond fixed imaging: SISR models trained here could one day let scientists film living cells faster and at lower light, opening the door to tracking instantaneous inter-cellular events with far less damage to the cells.</p>
+        <h2 class="reveal"><span class="nm">08 · Takeaways</span>Why it matters</h2>
+        <p class="reveal">SR-CACO-2 closes a real gap: a public, reproducible benchmark of <strong>real</strong> LR/HR microscopy pairs across three scales and three markers. Its difficulty is a feature, it gives the community honest ground to improve on. And the payoff reaches beyond fixed imaging: SISR models trained here could one day let scientists film living cells faster and at lower light, opening the door to tracking instantaneous inter-cellular events with far less damage to the cells.</p>
 
-        <h2 class="reveal"><span class="nm">09 — Access</span>Get the data, poster &amp; slides</h2>
+        <h2 class="reveal"><span class="nm">09 · Access</span>Get the data, poster &amp; slides</h2>
         <p class="reveal">SR-CACO-2 is freely available under <strong>CC BY-NC-SA 4.0</strong>. Grab the data via the <a href="https://github.com/LIVIAETS/sr-caco-2?tab=readme-ov-file#download-sr-caco-2" target="_blank" rel="noopener">download instructions</a>; code and pretrained weights are on <a href="https://github.com/LIVIAETS/sr-caco-2" target="_blank" rel="noopener">GitHub</a> and <a href="https://huggingface.co/sbelharbi/sr-caco-2" target="_blank" rel="noopener">Hugging Face</a>.</p>
         <div class="keyfacts reveal" style="grid-template-columns:1fr 1fr">
           <a class="kf" href="/material/sr-caco-2/poster.pdf" target="_blank" rel="noopener" style="color:inherit"><b>&#128196;</b><span>NeurIPS 2024 poster (PDF)</span></a>
           <a class="kf" href="/material/sr-caco-2/slides.pdf" target="_blank" rel="noopener" style="color:inherit"><b>&#128202;</b><span>Talk slides (PDF)</span></a>
         </div>
 
-        <h2 class="reveal"><span class="nm">10 — Cite</span>Citation</h2>
+        <h2 class="reveal"><span class="nm">10 · Cite</span>Citation</h2>
         <pre class="reveal"><code>@inproceedings{belharbi24-sr-caco-2,
   title={SR-CACO-2: A Dataset for Confocal Fluorescence
          Microscopy Image Super-Resolution},
@@ -129,7 +129,7 @@
   booktitle={NeurIPS},
   year={2024}
 }</code></pre>
-        <p class="affil reveal" style="margin-top:24px">Acknowledgments — supported in part by the Canadian Institutes of Health Research, NSERC, and the Digital Research Alliance of Canada.</p>
+        <p class="affil reveal" style="margin-top:24px">Acknowledgments, supported in part by the Canadian Institutes of Health Research, NSERC, and the Digital Research Alliance of Canada.</p>
 
       </div>
     </article>
@@ -140,7 +140,7 @@
       <div class="footer-grid">
         <div>
           <span class="fb">LIVIA</span>
-          <p>Laboratoire d'Imagerie, de Vision et d'Intelligence Artificielle — at the École de technologie supérieure (ÉTS), Université du Québec, Montréal.</p>
+          <p>Laboratoire d'Imagerie, de Vision et d'Intelligence Artificielle, at the École de technologie supérieure (ÉTS), Université du Québec, Montréal.</p>
           <a class="fets" href="https://www.etsmtl.ca/" target="_blank" rel="noopener"><img src="/images/brand/ets-logo.svg" alt="ÉTS"></a>
         </div>
         <div class="fcol">
@@ -152,7 +152,7 @@
           <p>1100 Notre-Dame St W<br>Montréal, QC H3C 1K3, Canada<br><a href="mailto:eric.granger@etsmtl.ca">eric.granger@etsmtl.ca</a></p>
         </div>
       </div>
-      <div class="fbot"><span>© 2026 LIVIA — ÉTS, Université du Québec.</span><span>Made in Montréal</span></div>
+      <div class="fbot"><span>© 2026 LIVIA, ÉTS, Université du Québec.</span><span>Made in Montréal</span></div>
     </div>
   </footer>
 
