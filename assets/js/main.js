@@ -158,7 +158,28 @@
     on(); window.addEventListener("scroll", on, { passive: true }); window.addEventListener("resize", on);
   }
 
+  /* ---- Rotating word(s) ---- */
+  function initRotator() {
+    document.querySelectorAll(".rotator").forEach(function (el) {
+      var words = (el.getAttribute("data-words") || "").split("|").filter(Boolean);
+      if (words.length < 2) return;
+      el.textContent = words[0];
+      if (reduce) return;
+      var i = 0;
+      setInterval(function () {
+        i = (i + 1) % words.length;
+        el.style.opacity = "0";
+        el.style.transform = "translateY(6px)";
+        setTimeout(function () {
+          el.textContent = words[i];
+          el.style.opacity = "1";
+          el.style.transform = "none";
+        }, 280);
+      }, 2300);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
-    initNav(); initReveal(); initCounters(); initHero(); initActive(); initScroll(); initProgress();
+    initNav(); initReveal(); initCounters(); initHero(); initActive(); initScroll(); initProgress(); initRotator();
   });
 })();

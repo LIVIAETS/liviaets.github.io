@@ -226,7 +226,9 @@ section { position: relative; }
 .card .ic {
   width: 48px; height: 48px; border-radius: 13px; display: inline-flex; align-items: center; justify-content: center;
   font-size: 1.4rem; margin-bottom: 18px; color: #fff; background: var(--grad); box-shadow: 0 8px 18px -8px rgba(99,102,241,.6);
+  transition: transform .25s cubic-bezier(.2,.7,.2,1);
 }
+.card:hover .ic { transform: scale(1.1) rotate(-4deg); }
 .card h4 { font-size: 1.16rem; margin-bottom: 8px; }
 .card p { color: var(--muted); font-size: .97rem; }
 .card .tag { font-family: var(--f-mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--brand-2); margin-bottom: 6px; }
@@ -471,6 +473,12 @@ a.member:hover .profile-link { gap: 9px; }
 .profile-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--f-mono); font-size: .76rem; letter-spacing: .08em; text-transform: uppercase; color: var(--brand-2); background: var(--surface); border: 1px solid var(--border); padding: 7px 14px; border-radius: 999px; margin-bottom: 18px; }
 .profile-hero h1 { font-size: clamp(2.2rem, 5vw, 3.3rem); line-height: 1.05; margin-bottom: 10px; }
 .profile-title { font-family: var(--f-display); font-weight: 600; font-size: 1.12rem; color: var(--heading); margin-bottom: 6px; }
+.profile-focus { font-family: var(--f-mono); font-size: .9rem; color: var(--muted); margin: 8px 0 16px; }
+.rotator { display: inline-block; font-weight: 600; transition: opacity .28s ease, transform .28s ease; }
+.kw-marquee { padding: 6px 0; }
+.kw-marquee .marquee-track { gap: 14px; animation-duration: 38s; }
+.kw-marquee .pill { white-space: nowrap; font-size: .85rem; }
+@media (prefers-reduced-motion: reduce) { .kw-marquee .marquee-track { flex-wrap: wrap; animation: none; width: auto; } }
 .profile-sub { color: var(--muted); font-size: 1.02rem; margin-bottom: 20px; }
 .profile-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .role-list { display: flex; flex-direction: column; gap: 12px; }
