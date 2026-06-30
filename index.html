@@ -166,9 +166,46 @@
     .home .ds-card { transition: transform .2s ease, border-color .2s ease, box-shadow .25s ease; }
     .home .ds-card:hover { border-color: rgba(228,0,50,.30); box-shadow: 0 26px 54px -26px rgba(228,0,50,.34), var(--shadow); }
 
-    @media (max-width: 720px) { .home .hero-orbit { display: none; } }
+    /* Shimmering gradient headline */
+    .home .hero h1 .grad-text { background-size: 220% auto; animation: sheen 9s linear infinite; }
+    @keyframes sheen { to { background-position: 220% center; } }
+
+    /* Hero stat numbers rendered in the brand gradient */
+    .home .stat .n {
+      background: var(--grad); -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+    }
+
+    /* Glowing section kicker tick */
+    .home .kicker::before { box-shadow: 0 0 8px rgba(228,0,50,.65); }
+
+    /* Pills: lift and glow on hover */
+    .home .pill { transition: transform .16s ease, border-color .18s ease, box-shadow .2s ease; }
+    .home .pill:hover { transform: translateY(-2px); border-color: rgba(228,0,50,.40); box-shadow: 0 10px 22px -14px rgba(228,0,50,.55); }
+
+    /* Light sweep across the primary button on hover */
+    .home .btn-primary { position: relative; overflow: hidden; }
+    .home .btn-primary::after {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(110deg, transparent 32%, rgba(255,255,255,.38) 50%, transparent 68%);
+      transform: translateX(-130%); transition: transform .65s ease;
+    }
+    .home .btn-primary:hover::after { transform: translateX(130%); }
+
+    /* Animated scroll cue at the foot of the hero */
+    .home .hero-scroll {
+      position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%); z-index: 2;
+      width: 26px; height: 42px; border: 1.5px solid var(--border); border-radius: 14px;
+      display: flex; justify-content: center; padding-top: 7px; opacity: .7;
+      background: var(--glass); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    }
+    .home .hero-scroll span { width: 4px; height: 8px; border-radius: 2px; background: var(--grad); animation: scrolldot 1.8s ease-in-out infinite; }
+    @keyframes scrolldot { 0% { transform: translateY(0); opacity: 1; } 70% { transform: translateY(12px); opacity: 0; } 100% { transform: translateY(0); opacity: 0; } }
+
+    @media (max-width: 720px) { .home .hero-orbit, .home .hero-scroll { display: none; } }
     @media (prefers-reduced-motion: reduce) {
-      .home .hero::before, .home .hero-orbit { animation: none; }
+      .home .hero::before, .home .hero-orbit, .home .hero h1 .grad-text, .home .hero-scroll span { animation: none; }
+      .home .btn-primary::after { display: none; }
     }
   </style>
 </head>
@@ -216,6 +253,7 @@
           <div class="stat"><div class="n" data-target="300" data-suffix="+">0</div><div class="l">Publications (5 yrs)</div></div>
         </div>
       </div>
+      <div class="hero-scroll" aria-hidden="true"><span></span></div>
     </section>
 
     <!-- RESEARCH -->
