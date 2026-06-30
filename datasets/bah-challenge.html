@@ -55,16 +55,17 @@
     <section class="blog-hero">
       <div class="read reveal">
         <div class="kicker">Challenge · ABAW 11th @ ECCV 2026</div>
-        <h1>3rd AH Video Recognition Challenge</h1>
-        <p class="sub">Predict ambivalence and hesitancy at the video level, the 3rd edition of our challenge at the 11th ABAW workshop, built on the <a href="/datasets/bah.html">BAH dataset</a>.</p>
+        <h1>3rd Ambivalence / Hesitancy (AH) Video Recognition Challenge</h1>
+        <p class="sub">The third edition of our challenge on recognizing ambivalence and hesitancy at the <strong>video level</strong>, organized within the 11th ABAW workshop at ECCV 2026 and built on the <a href="/datasets/bah.html">BAH dataset</a>.</p>
         <div class="meta">
-          <span>&#9733; <b>3rd</b> edition</span>
-          <span>&#128197; Test set <b>Jul 10, 2026</b></span>
+          <span>&#128101; <b>300</b> participants</span>
+          <span>&#127909; <b>1,427</b> videos · 10.6 h</span>
+          <span>&#128202; <b>Macro-F1</b> ranking</span>
           <span>&#127942; Top 3 in <b>ECCV 2026</b> proceedings</span>
         </div>
         <div class="profile-actions" style="margin-top:22px">
-          <a class="btn btn-primary" href="https://sbelharbi.github.io/otherdocs/abaw-11th-ah-3rd/Call--Ambivalence-Hesitancy-AH-Video-Recognition-Challenge-3rd--ABAW11th-ECCV-2026.pdf" target="_blank" rel="noopener">Register &amp; read the full call &rarr;</a>
-          <a class="btn btn-ghost" href="https://affective-behavior-analysis-in-the-wild.github.io/11th" target="_blank" rel="noopener">ABAW 11th website</a>
+          <a class="btn btn-primary" href="https://affective-behavior-analysis-in-the-wild.github.io/11th" target="_blank" rel="noopener">Register on the ABAW 11th website &rarr;</a>
+          <a class="btn btn-ghost" href="/datasets/bah.html">About the BAH dataset</a>
         </div>
       </div>
     </section>
@@ -73,26 +74,64 @@
       <div class="read">
 
         <h2 class="reveal"><span class="nm">01 · Overview</span>About the challenge</h2>
-        <p class="lead-para reveal">Participating teams get access to the Behavioural Ambivalence and Hesitancy (BAH) dataset, a richly annotated video dataset for ambivalence/hesitancy recognition, to develop and benchmark their own expression-recognition methods.</p>
+        <p class="lead-para reveal">The Ambivalence/Hesitancy (AH) Video Recognition Challenge invites teams to build models that decide whether a person is ambivalent or hesitant in a given video. Now in its third edition, the challenge is organized within the 11th Workshop and Competition on Affective &amp; Behavior Analysis in-the-Wild (ABAW) at <strong>ECCV 2026</strong>, and is powered by the richly annotated <a href="/datasets/bah.html">BAH dataset</a>.</p>
         <div class="keyfacts reveal">
-          <div class="kf"><b>300</b><span>participants</span></div>
-          <div class="kf"><b>1,427</b><span>videos</span></div>
-          <div class="kf"><b>3rd</b><span>challenge edition</span></div>
-          <div class="kf"><b>ECCV</b><span>2026 proceedings</span></div>
+          <div class="kf"><b>300</b><span>participants across Canada</span></div>
+          <div class="kf"><b>1,427</b><span>videos · 10.60 hours</span></div>
+          <div class="kf"><b>3rd</b><span>edition (ABAW 11th)</span></div>
+          <div class="kf"><b>Macro-F1</b><span>ranking metric</span></div>
         </div>
-        <p class="reveal">The challenge is now open for registration, allowing teams to access the BAH training data. It is part of the 11th Workshop and Competition on Affective &amp; Behavior Analysis in-the-Wild (ABAW) at ECCV 2026.</p>
+        <p class="reveal">Upon registration, teams are granted full access to the BAH training data and can develop, train and benchmark their own methods, before being evaluated on a held-out private test set. The top teams are invited to publish their approach in the ECCV 2026 workshop proceedings.</p>
 
-        <h2 class="reveal"><span class="nm">02 · The task</span>What you'll build</h2>
-        <p class="reveal">This edition's task is to predict ambivalence/hesitancy at the <strong>video level</strong>: <em>is there ambivalence or hesitancy in a given video?</em> Teams train models on the BAH data and submit predictions evaluated on a held-out test set.</p>
+        <h2 class="reveal"><span class="nm">02 · Background</span>What is ambivalence &amp; hesitancy?</h2>
+        <p class="reveal">Ambivalence and hesitancy (A/H) are closely related constructs and a primary reason why people <strong>delay, avoid, or abandon health-behaviour changes</strong>. A/H is a subtle, conflicting emotion that places a person between positive and negative orientations, or between acceptance and refusal to act. It is a barrier to initiating behaviour change and a trigger for discontinuing interventions, which makes detecting it valuable for digital, personalized behaviour-change interventions.</p>
+        <p class="reveal">To detect A/H, experts rely on conflicting emotional cues, positive and negative, expressed through facial, language, audio and body-language modalities. Conflicts <em>across</em> modalities (cross-modality) are comparatively easy to spot, but a conflict <em>within</em> a single modality can also signal A/H and is far harder to detect. Our work [1] showed that standard deep multimodal models and fusion techniques achieve only low accuracy on this task, indicating they are not yet well equipped for A/H recognition.</p>
+        <blockquote class="pullquote reveal">Can a model tell, from a short video, when someone is of two minds, caught between acceptance and refusal?</blockquote>
 
-        <h2 class="reveal"><span class="nm">03 · Awards</span>Publication &amp; recognition</h2>
-        <p class="reveal">The <strong>top 3 winning teams</strong> will contribute paper(s) describing their approach, methodology and results to the workshop, in addition to making their code public. The accepted papers will be part of the <strong>ECCV 2026 proceedings</strong>.</p>
+        <h2 class="reveal"><span class="nm">03 · The task</span>Video-level A/H recognition</h2>
+        <p class="reveal">This edition keeps the same task as the previous one: <strong>video-level binary prediction</strong>. Given a video, predict whether it contains ambivalence/hesitancy: <code>1</code> for presence of A/H, <code>0</code> for absence. Since A and H manifest similarly in practice, BAH provides a single binary annotation covering both, without distinguishing between them.</p>
+        <p class="reveal">Teams are free to explore a wide range of learning setups, including:</p>
+        <ul class="reveal">
+          <li>Supervised and self-supervised learning</li>
+          <li>Domain adaptation, test-time adaptation and personalization (BAH is participant-based)</li>
+          <li>Zero-shot and few-shot learning</li>
+          <li>Standard multimodal models, vision-language models (VLMs) and multimodal LLMs with parameter-efficient fine-tuning (PEFT)</li>
+          <li>Temporal modeling, multimodal alignment and specialized fusion to capture conflicting affect within and across modalities</li>
+        </ul>
+        <p class="reveal">Interpretable solutions are encouraged, for example highlighting <em>when</em> A/H occurs in a video, or <em>which</em> modalities, cues or conflicts drive a prediction. The rich frame- and video-level annotations of BAH can be used for both training and evaluation.</p>
 
-        <h2 class="reveal"><span class="nm">04 · Timeline</span>Key dates</h2>
+        <h2 class="reveal"><span class="nm">04 · Dataset</span>The BAH video dataset</h2>
+        <p class="reveal">On registration, teams receive a fully annotated (video- and frame-level) version of the BAH dataset [1], collected for multimodal recognition of A/H in videos. It contains <strong>1,427 videos totalling 10.60 hours</strong>, captured from <strong>300 participants across Canada</strong> who answered a predefined set of questions designed to elicit A/H, mirroring real-world online behaviour-change interventions.</p>
+        <ul class="reveal">
+          <li>Expert annotations with timestamps marking <em>where</em> A/H occurs, plus frame- and video-level labels with A/H cues</li>
+          <li>Multimodal data: raw videos, cropped and aligned faces per frame, audio, and speech-to-text transcripts with timestamps</li>
+          <li>Annotator cues, participant metadata, and predefined participant-wise splits (training, validation, test)</li>
+          <li>Up to seven videos per participant; the data is divided participant-wise to prevent identity leakage between splits</li>
+        </ul>
+        <p class="reveal">Teams train on the BAH training set under any form of supervision and report performance on the public test set using the provided <code>bah_metrics.py</code>. A second, <strong>unlabeled private test set</strong> is released near the end of the challenge and is used for the official ranking. For full details, figures and benchmarks, see the <a href="/datasets/bah.html">BAH dataset page</a>.</p>
+
+        <h2 class="reveal"><span class="nm">05 · Rules</span>What's allowed</h2>
+        <p class="reveal">Teams may use <strong>any publicly available or private pre-trained model</strong> and <strong>any public or private dataset</strong> containing any type of annotation (e.g. valence/arousal, basic or compound emotions, action units). Other ambivalence/hesitancy datasets, where available, may be used in addition to BAH. Any external dataset used <strong>must be disclosed in the paper</strong>. Teams are encouraged to develop solutions specifically tailored to A/H recognition rather than relying on generic emotion models.</p>
+
+        <h2 class="reveal"><span class="nm">06 · Evaluation</span>How submissions are scored</h2>
+        <p class="reveal">The ranking metric <strong>P</strong> is the macro-averaged F1 score (Macro F1) at the video level across both classes, presence (1) and absence (0) of A/H, computed over the private test set. The average precision (AP) of the positive class is also reported.</p>
+        <p class="reveal">During the one-week test period, teams submit per-video predictions on the private test set by email to the organizers. Up to <strong>5 trials</strong> are allowed, either all at once or one at a time, the latter lets organizers return per-trial feedback so teams can adjust their approach. The <strong>best trial</strong> is used to rank teams and determine the winners. The exact submission format is communicated on the test-release date.</p>
+
+        <h2 class="reveal"><span class="nm">07 · Baseline</span>Starting point</h2>
+        <p class="reveal">A baseline performance of <strong>P = 0.2827</strong> was obtained on the BAH public test set using a zero-shot multimodal LLM (Video-LLaVA) with a simple prompt and the vision modality only. Teams can also build on a standard multimodal model that leverages vision, audio and text, adapting it from frame-level to video-level prediction. Both the <a href="https://github.com/sbelharbi/zero-shot-m-llm-bah-prediction" target="_blank" rel="noopener">baseline code</a> and the <a href="https://github.com/LIVIAETS/bah-dataset" target="_blank" rel="noopener">BAH dataset code</a> are openly available as references.</p>
+
+        <h2 class="reveal"><span class="nm">08 · Editions</span>A three-edition history</h2>
+        <ul class="reveal">
+          <li><strong>1st edition — ABAW 8th @ CVPR 2025:</strong> frame-level prediction of A/H, which attracted several teams.</li>
+          <li><strong>2nd edition — ABAW 10th @ CVPR 2026:</strong> moved to video-level prediction, <em>is there A/H in a given video?</em> Solutions are summarized on <a href="https://arxiv.org/pdf/2605.27451" target="_blank" rel="noopener">arXiv</a>.</li>
+          <li><strong>3rd edition — ABAW 11th @ ECCV 2026:</strong> the same video-level task, now with access to the larger, richly annotated BAH dataset.</li>
+        </ul>
+
+        <h2 class="reveal"><span class="nm">09 · Timeline</span>Key dates</h2>
         <div class="callout reveal" style="margin-top:8px">
           <ul class="timeline">
             <li><span class="d">Jul 10, 2026</span><span class="e">Test set release</span></li>
-            <li><span class="d">Jul 16, 2026</span><span class="e">Final submission, predictions, code &amp; ArXiv paper</span></li>
+            <li><span class="d">Jul 16, 2026</span><span class="e">Final submission deadline — predictions, code &amp; ArXiv paper</span></li>
             <li><span class="d">Jul 18, 2026</span><span class="e">Winners announcement</span></li>
             <li><span class="d">Jul 20, 2026</span><span class="e">Final paper submission deadline</span></li>
             <li><span class="d">Aug 10, 2026</span><span class="e">Review decisions / notification of acceptance</span></li>
@@ -100,25 +139,31 @@
           </ul>
         </div>
 
-        <h2 class="reveal"><span class="nm">05 · Register</span>How to take part</h2>
-        <p class="reveal"><strong>All participating teams must register.</strong> Registration information and full details, including how to access the BAH data, are in the official call:</p>
+        <h2 class="reveal"><span class="nm">10 · Awards</span>Publication &amp; recognition</h2>
+        <p class="reveal">The <strong>top 3 winning teams</strong> will contribute paper(s) describing their approach, methodology and results, and are required to make their code public. Accepted papers will be part of the <strong>ECCV 2026 workshop proceedings</strong>.</p>
+
+        <h2 class="reveal"><span class="nm">11 · Register</span>How to take part</h2>
+        <p class="reveal"><strong>All participating teams must register.</strong> Registration involves completing a form and signing an EULA. Both the form and the EULA must be completed and signed by a person holding a <strong>full-time faculty position</strong> at a university, higher-education institution, or equivalent organization, the signee cannot be a student (undergraduate, postgraduate, Ph.D. or postdoctoral). Once the signed form is submitted, the organizers will share access details for the BAH video dataset.</p>
+        <p class="reveal">Find the registration form, EULA and the full call on the ABAW 11th website, and reach the organizers at <a href="mailto:soufiane.belharbi@gmail.com">soufiane.belharbi@gmail.com</a> for questions about registration or data access.</p>
         <div class="reveal profile-actions" style="margin:6px 0 4px">
-          <a class="btn btn-primary" href="https://sbelharbi.github.io/otherdocs/abaw-11th-ah-3rd/Call--Ambivalence-Hesitancy-AH-Video-Recognition-Challenge-3rd--ABAW11th-ECCV-2026.pdf" target="_blank" rel="noopener">Open the official call (PDF) &rarr;</a>
-          <a class="btn btn-ghost" href="https://affective-behavior-analysis-in-the-wild.github.io/11th" target="_blank" rel="noopener">More ABAW 11th challenges</a>
+          <a class="btn btn-primary" href="https://affective-behavior-analysis-in-the-wild.github.io/11th" target="_blank" rel="noopener">ABAW 11th website &rarr;</a>
+          <a class="btn btn-ghost" href="https://affective-behavior-analysis-in-the-wild.github.io/11th/#counts1" target="_blank" rel="noopener">AH Challenge section</a>
         </div>
 
-        <h2 class="reveal"><span class="nm">06 · History</span>Previous edition</h2>
-        <p class="reveal">Teams can study the different solutions proposed in the previous (2nd) challenge edition on <a href="https://arxiv.org/pdf/2605.27451" target="_blank" rel="noopener">arXiv</a>.</p>
+        <h2 class="reveal"><span class="nm">12 · Team</span>Organizers</h2>
+        <p class="reveal">Eric Granger, Alessandro Lameiras Koerich and Marco Pedersoli (LIVIA, ÉTS Montréal), and Simon L. Bacon (Montreal Behavioural Medicine Centre, Concordia University). Contact: <a href="mailto:soufiane.belharbi@gmail.com">soufiane.belharbi@gmail.com</a>.</p>
 
-        <h2 class="reveal"><span class="nm">07 · Team</span>Organizers</h2>
-        <p class="reveal">Eric Granger, Alessandro Lameiras Koerich, Marco Pedersoli (LIVIA, ÉTS Montréal) and Simon Bacon (Montreal Behavioural Medicine Centre, Concordia University).</p>
-
-        <h2 class="reveal"><span class="nm">08 · Data</span>Dataset &amp; reference</h2>
+        <h2 class="reveal"><span class="nm">13 · Reference</span>Cite the BAH dataset</h2>
         <p class="reveal">The challenge is built on the BAH dataset, see the full <a href="/datasets/bah.html">BAH dataset page</a> for details, figures and benchmarks.</p>
-        <pre class="reveal"><code>González-González, M., Belharbi, S., Zeeshan, M. O., Sharafi, M.,
-Aslam, M. H., Pedersoli, M., Koerich, A. L., Bacon, S. L., Granger, E.
-"BAH Dataset for Ambivalence/Hesitancy Recognition in Videos
- for Digital Behavioural Change." arXiv:2505.19328, ICLR, 2026.</code></pre>
+        <pre class="reveal"><code>@article{gonzalez-25-bah,
+  title={BAH Dataset for Ambivalence/Hesitancy Recognition in
+         Videos for Digital Behavioural Change},
+  author={González-González, M. and Belharbi, S. and Zeeshan, M. O.
+          and Sharafi, M. and Aslam, M. H. and Pedersoli, M. and
+          Koerich, A. L. and Bacon, S. L. and Granger, E.},
+  journal={arXiv preprint arXiv:2505.19328},
+  year={2025}
+}</code></pre>
 
       </div>
     </article>
