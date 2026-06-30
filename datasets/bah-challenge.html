@@ -29,6 +29,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    /* Timeline anchor: clear the fixed nav, and highlight when jumped to */
+    #timeline { scroll-margin-top: 96px; }
+    .callout-timeline { scroll-margin-top: 96px; transition: box-shadow .3s ease, border-color .3s ease; }
+    #timeline:target + .callout-timeline {
+      border-color: var(--brand-2);
+      animation: timeline-flash 1.8s ease 1;
+    }
+    @keyframes timeline-flash {
+      0%   { box-shadow: 0 0 0 0 rgba(228,0,50,.55), var(--shadow); }
+      35%  { box-shadow: 0 0 0 4px rgba(228,0,50,.45), var(--shadow); }
+      100% { box-shadow: 0 0 0 0 rgba(228,0,50,0), var(--shadow-sm); }
+    }
+  </style>
 </head>
 <body>
 
@@ -65,6 +79,7 @@
         </div>
         <div class="profile-actions" style="margin-top:22px">
           <a class="btn btn-primary" href="https://affective-behavior-analysis-in-the-wild.github.io/11th" target="_blank" rel="noopener">Register on the ABAW 11th website &rarr;</a>
+          <a class="btn btn-ghost" href="#timeline">&#128197; Key dates</a>
           <a class="btn btn-ghost" href="/datasets/bah.html">About the BAH dataset</a>
         </div>
       </div>
@@ -127,8 +142,8 @@
           <li><strong>3rd edition — ABAW 11th @ ECCV 2026:</strong> the same video-level task, now with access to the larger, richly annotated BAH dataset.</li>
         </ul>
 
-        <h2 class="reveal"><span class="nm">09 · Timeline</span>Key dates</h2>
-        <div class="callout reveal" style="margin-top:8px">
+        <h2 id="timeline" class="reveal"><span class="nm">09 · Timeline</span>Key dates</h2>
+        <div class="callout callout-timeline reveal" style="margin-top:8px">
           <ul class="timeline">
             <li><span class="d">Jul 10, 2026</span><span class="e">Test set release</span></li>
             <li><span class="d">Jul 16, 2026</span><span class="e">Final submission deadline — predictions, code &amp; ArXiv paper</span></li>
