@@ -30,6 +30,7 @@
   --dot: rgba(10,13,24,.5);
 
   --maxw: 1180px;
+  --read-col: 860px;   /* consistent reading-column width for body text */
   --r: 18px;
   --r-sm: 12px;
   --r-lg: 26px;
@@ -325,7 +326,7 @@ section { position: relative; }
 .ds-links a:hover { transform: translateY(-2px); border-color: rgba(228,0,50,.45); }
 
 /* Dataset detail article */
-.article { max-width: 860px; margin: 0 auto; padding: 56px 24px 30px; }
+.article { max-width: calc(var(--read-col) + 48px); margin: 0 auto; padding: 56px 24px 30px; }
 .article > section { margin-bottom: 18px; }
 .article h2 { font-size: 1.7rem; margin: 48px 0 16px; padding-top: 30px; border-top: 1px solid var(--border); }
 .article h2:first-child { border: 0; padding: 0; margin-top: 0; }
@@ -392,7 +393,18 @@ section { position: relative; }
 /* running text stays at a comfortable measure; figures & cards fill the full width */
 .post p, .post ul, .post ol, .post .lead-para, .post .pullquote,
 .post .authorline, .post .affil, .post pre,
-.blog-hero .sub, .blog-hero .meta { max-width: 940px; }
+.post .callout, .post .keyfacts, .post .challenge-banner, .post .badges,
+.blog-hero .sub, .blog-hero .meta { max-width: var(--read-col); }
+
+/* Justify running body text (not display leads, author lists or captions) */
+.post p:not(.lead-para):not(.authorline):not(.affil), .post li,
+.article p, .article li,
+.prose p, .prose li {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.prose { max-width: var(--read-col); }
 
 /* reading progress bar */
 .reading-progress { position: fixed; top: 72px; left: 0; height: 3px; width: 0; z-index: 99; background: var(--grad); transition: width .08s linear; }
