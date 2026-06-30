@@ -3,24 +3,56 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>A Realistic Protocol for Evaluation of Weakly Supervised Object Localization · WACV 2025 · LIVIA</title>
-  <meta name="description" content="A WACV 2025 paper from LIVIA, ÉTS Montréal proposing a realistic WSOL evaluation protocol: model selection and threshold estimation from automatically generated pseudo bounding boxes (Selective Search, CLIP, RPN), with no manual box annotations.">
-  <meta name="keywords" content="Weakly Supervised Object Localization, WSOL, model selection, evaluation protocol, pseudo bounding boxes, Selective Search, CLIP, RPN, WACV 2025, Shakeeb Murtaza, LIVIA, ÉTS Montréal">
+  <title>WSOL Benchmark &amp; Evaluation Protocol: Weakly Supervised Object Localization on Natural &amp; Medical Images · WACV 2025 · LIVIA</title>
+  <meta name="description" content="A realistic benchmark and evaluation protocol for Weakly Supervised Object Localization (WSOL). Model selection and threshold estimation from automatically generated pseudo bounding boxes (Selective Search, CLIP, RPN), no manual box annotations, validated on natural images (CUB, ImageNet) and medical images (GlaS, Camelyon16). WACV 2025, by Murtaza, Belharbi, Pedersoli and Granger at LIVIA, ÉTS Montréal.">
+  <meta name="keywords" content="weakly supervised object localization, WSOL, WSOL benchmark, WSOL evaluation protocol, model selection, threshold estimation, pseudo bounding boxes, region proposals, Selective Search, CLIP, RPN, class activation mapping, CAM, MaxBoxAcc, pointing game, natural images, medical images, CUB, ImageNet, ILSVRC, GlaS, Camelyon16, histology, weak supervision, computer vision, deep learning, WACV 2025, Shakeeb Murtaza, Soufiane Belharbi, Marco Pedersoli, Eric Granger, LIVIA, ÉTS Montréal">
   <meta name="author" content="Shakeeb Murtaza, Soufiane Belharbi, Marco Pedersoli, Eric Granger">
   <meta name="theme-color" content="#e40032">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <link rel="canonical" href="https://liviaets.github.io/research/realistic-wsol-protocol.html">
+
+  <!-- Google Scholar / Highwire Press citation tags (academic indexing) -->
+  <meta name="citation_title" content="A Realistic Protocol for Evaluation of Weakly Supervised Object Localization">
+  <meta name="citation_author" content="Murtaza, Shakeeb">
+  <meta name="citation_author" content="Belharbi, Soufiane">
+  <meta name="citation_author" content="Pedersoli, Marco">
+  <meta name="citation_author" content="Granger, Eric">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_conference_title" content="IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2404.10034">
+  <meta name="citation_arxiv_id" content="2404.10034">
+  <meta name="citation_abstract_html_url" content="https://liviaets.github.io/research/realistic-wsol-protocol.html">
+  <meta name="citation_public_url" content="https://liviaets.github.io/research/realistic-wsol-protocol.html">
+  <meta name="citation_language" content="en">
+  <meta name="citation_keywords" content="weakly supervised object localization; WSOL; benchmark; evaluation protocol; model selection; threshold estimation; pseudo bounding boxes; Selective Search; CLIP; RPN; CAM; natural images; medical images; CUB; ImageNet; GlaS; Camelyon16">
+
+  <!-- Dublin Core -->
+  <meta name="DC.title" content="A Realistic Protocol for Evaluation of Weakly Supervised Object Localization">
+  <meta name="DC.creator" content="Murtaza, Shakeeb">
+  <meta name="DC.creator" content="Belharbi, Soufiane">
+  <meta name="DC.creator" content="Pedersoli, Marco">
+  <meta name="DC.creator" content="Granger, Eric">
+  <meta name="DC.date" content="2025">
+  <meta name="DC.type" content="Conference Paper">
+  <meta name="DC.identifier" content="arXiv:2404.10034">
+
   <meta property="og:site_name" content="LIVIA · ÉTS Montréal">
-  <meta property="og:title" content="A Realistic Protocol for Evaluation of Weakly Supervised Object Localization">
-  <meta property="og:description" content="WACV 2025: realistic WSOL evaluation with pseudo bounding boxes for model selection and threshold estimation, no manual box annotations needed.">
+  <meta property="og:title" content="WSOL Benchmark &amp; Evaluation Protocol on Natural &amp; Medical Images (WACV 2025)">
+  <meta property="og:description" content="A realistic benchmark for Weakly Supervised Object Localization: pseudo bounding boxes (Selective Search, CLIP, RPN) for model selection and threshold estimation on CUB, ImageNet, GlaS and Camelyon16, with no manual box annotations.">
   <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2025-02-28">
+  <meta property="article:author" content="Shakeeb Murtaza">
+  <meta property="article:section" content="Computer Vision">
+  <meta property="article:tag" content="Weakly Supervised Object Localization">
+  <meta property="article:tag" content="WSOL benchmark">
+  <meta property="article:tag" content="medical imaging">
   <meta property="og:url" content="https://liviaets.github.io/research/realistic-wsol-protocol.html">
   <meta property="og:locale" content="en_CA">
   <meta property="og:image" content="https://liviaets.github.io/material/realistic-wsol/overestimation.png">
-  <meta property="og:image:alt" content="Localization accuracy is overestimated when ground-truth boxes are used for selection">
+  <meta property="og:image:alt" content="WSOL localization accuracy is overestimated when ground-truth boxes are used for model selection">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="A Realistic Protocol for Evaluation of Weakly Supervised Object Localization · WACV 2025">
-  <meta name="twitter:description" content="Realistic WSOL evaluation with pseudo bounding boxes for model selection and threshold estimation.">
+  <meta name="twitter:title" content="WSOL Benchmark &amp; Evaluation Protocol on Natural &amp; Medical Images · WACV 2025">
+  <meta name="twitter:description" content="Realistic WSOL evaluation with pseudo bounding boxes for model selection and threshold estimation on CUB, ImageNet, GlaS and Camelyon16.">
   <meta name="twitter:image" content="https://liviaets.github.io/material/realistic-wsol/overestimation.png">
   <script type="application/ld+json">
   {
@@ -28,18 +60,31 @@
     "@type": "ScholarlyArticle",
     "headline": "A Realistic Protocol for Evaluation of Weakly Supervised Object Localization",
     "name": "A Realistic Protocol for Evaluation of Weakly Supervised Object Localization",
+    "alternativeHeadline": "A realistic WSOL benchmark and evaluation protocol for natural and medical images",
     "author": [
-      { "@type": "Person", "name": "Shakeeb Murtaza", "url": "https://liviaets.github.io/team/shakeeb-murtaza.html" },
-      { "@type": "Person", "name": "Soufiane Belharbi" },
-      { "@type": "Person", "name": "Marco Pedersoli" },
-      { "@type": "Person", "name": "Eric Granger", "url": "https://liviaets.github.io/team/eric-granger.html" }
+      { "@type": "Person", "name": "Shakeeb Murtaza", "url": "https://liviaets.github.io/team/shakeeb-murtaza.html", "affiliation": { "@type": "Organization", "name": "LIVIA, ÉTS Montréal" } },
+      { "@type": "Person", "name": "Soufiane Belharbi", "affiliation": { "@type": "Organization", "name": "LIVIA, ÉTS Montréal" } },
+      { "@type": "Person", "name": "Marco Pedersoli", "affiliation": { "@type": "Organization", "name": "LIVIA, ÉTS Montréal" } },
+      { "@type": "Person", "name": "Eric Granger", "url": "https://liviaets.github.io/team/eric-granger.html", "affiliation": { "@type": "Organization", "name": "LIVIA, ÉTS Montréal" } }
     ],
-    "datePublished": "2025",
+    "datePublished": "2025-02-28",
+    "inLanguage": "en",
     "publication": "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+    "isPartOf": { "@type": "PublicationEvent", "name": "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2025" },
     "image": "https://liviaets.github.io/material/realistic-wsol/overestimation.png",
     "url": "https://liviaets.github.io/research/realistic-wsol-protocol.html",
-    "about": ["Weakly Supervised Object Localization", "Computer Vision", "Model Selection", "Evaluation Protocol"],
-    "publisher": { "@type": "ResearchOrganization", "name": "LIVIA, ÉTS Montréal", "url": "https://liviaets.github.io/" },
+    "identifier": [
+      { "@type": "PropertyValue", "propertyID": "arXiv", "value": "2404.10034" }
+    ],
+    "abstract": "Weakly Supervised Object Localization (WSOL) trains models for classification and localization using only image-level class labels. Standard WSOL evaluation relies on manual bounding-box annotations on a validation set for model selection and on the test set for threshold estimation, which is unrealistic because such boxes are unavailable in practice and inflates reported localization accuracy. We propose a realistic WSOL evaluation protocol that needs no manual boxes: pseudo bounding boxes are generated automatically with off-the-shelf region proposal models (Selective Search, CLIP, and RPN) and filtered with a pointing-game criterion, then used for both model selection and threshold estimation. On natural-image benchmarks (CUB, ImageNet) and medical-image datasets (GlaS, Camelyon16), models selected with pseudo boxes match those selected with ground-truth boxes and outperform class-label selection with automatic thresholding, while reducing the threshold search from 1000 values to one.",
+    "keywords": ["Weakly Supervised Object Localization", "WSOL", "benchmark", "evaluation protocol", "model selection", "threshold estimation", "pseudo bounding boxes", "region proposals", "Selective Search", "CLIP", "RPN", "Class Activation Mapping", "natural images", "medical images", "CUB", "ImageNet", "GlaS", "Camelyon16", "weak supervision", "computer vision", "deep learning"],
+    "about": [
+      { "@type": "Thing", "name": "Weakly Supervised Object Localization" },
+      { "@type": "Thing", "name": "WSOL benchmark and evaluation protocol" },
+      { "@type": "Thing", "name": "Model selection without bounding-box annotations" },
+      { "@type": "Thing", "name": "Medical image localization" }
+    ],
+    "publisher": { "@type": "ResearchOrganization", "name": "LIVIA, Laboratory of Imaging, Vision and Artificial Intelligence, ÉTS Montréal", "url": "https://liviaets.github.io/" },
     "sameAs": [
       "https://arxiv.org/abs/2404.10034",
       "https://github.com/shakeebmurtaza/wsol_model_selection",
@@ -110,6 +155,9 @@
         </div>
 
         <p class="lead-para reveal">Weakly Supervised Object Localization trains a model to both classify an image and locate the object inside it, using only class labels. The promise is appealing: no expensive bounding boxes. The catch, hidden in plain sight, is that the field has been quietly using boxes anyway, to choose models and to set thresholds. This paper removes that crutch.</p>
+
+        <h2 class="reveal"><span class="nm">Abstract</span>In one paragraph</h2>
+        <p class="reveal">Weakly Supervised Object Localization (WSOL) trains models for classification and localization using only image-level class labels. Standard WSOL evaluation relies on manual bounding-box annotations on a validation set for model selection and on the test set for threshold estimation, which is unrealistic because such boxes are unavailable in practice and inflates reported localization accuracy. We propose a realistic WSOL evaluation protocol that needs no manual boxes: pseudo bounding boxes are generated automatically with off-the-shelf region proposal models (Selective Search, CLIP, and RPN) and filtered with a pointing-game criterion, then used for both model selection and threshold estimation. On natural-image benchmarks (CUB, ImageNet) and medical-image datasets (GlaS, Camelyon16), models selected with pseudo boxes match those selected with ground-truth boxes and outperform class-label selection with automatic thresholding, while reducing the threshold search from 1000 values to one.</p>
 
         <h2 class="reveal"><span class="nm">01 · Background</span>What WSOL promises</h2>
         <p class="reveal">Weakly Supervised Object Localization (WSOL) lets a deep network learn classification and localization from coarse class labels alone, sidestepping the cost of annotating datasets with bounding boxes. Class Activation Mapping (CAM) is the dominant approach: it produces a spatial heatmap that highlights the object, which is then thresholded into a box. The appeal is obvious, since labelling a class is far cheaper than drawing a box on every image.</p>
