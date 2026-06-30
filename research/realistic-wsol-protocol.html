@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Realistic Protocol for Evaluation of Weakly Supervised Object Localization · WACV 2025 · LIVIA</title>
+  <meta name="description" content="A WACV 2025 paper from LIVIA, ÉTS Montréal proposing a realistic WSOL evaluation protocol: model selection and threshold estimation from automatically generated pseudo bounding boxes (Selective Search, CLIP, RPN), with no manual box annotations.">
+  <meta name="keywords" content="Weakly Supervised Object Localization, WSOL, model selection, evaluation protocol, pseudo bounding boxes, Selective Search, CLIP, RPN, WACV 2025, Shakeeb Murtaza, LIVIA, ÉTS Montréal">
+  <meta name="author" content="Shakeeb Murtaza, Soufiane Belharbi, Marco Pedersoli, Eric Granger">
+  <meta name="theme-color" content="#e40032">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://liviaets.github.io/research/realistic-wsol-protocol.html">
+  <meta property="og:site_name" content="LIVIA · ÉTS Montréal">
+  <meta property="og:title" content="A Realistic Protocol for Evaluation of Weakly Supervised Object Localization">
+  <meta property="og:description" content="WACV 2025: realistic WSOL evaluation with pseudo bounding boxes for model selection and threshold estimation, no manual box annotations needed.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://liviaets.github.io/research/realistic-wsol-protocol.html">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:image" content="https://liviaets.github.io/material/realistic-wsol/overestimation.png">
+  <meta property="og:image:alt" content="Localization accuracy is overestimated when ground-truth boxes are used for selection">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="A Realistic Protocol for Evaluation of Weakly Supervised Object Localization · WACV 2025">
+  <meta name="twitter:description" content="Realistic WSOL evaluation with pseudo bounding boxes for model selection and threshold estimation.">
+  <meta name="twitter:image" content="https://liviaets.github.io/material/realistic-wsol/overestimation.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "A Realistic Protocol for Evaluation of Weakly Supervised Object Localization",
+    "name": "A Realistic Protocol for Evaluation of Weakly Supervised Object Localization",
+    "author": [
+      { "@type": "Person", "name": "Shakeeb Murtaza", "url": "https://liviaets.github.io/team/shakeeb-murtaza.html" },
+      { "@type": "Person", "name": "Soufiane Belharbi" },
+      { "@type": "Person", "name": "Marco Pedersoli" },
+      { "@type": "Person", "name": "Eric Granger", "url": "https://liviaets.github.io/team/eric-granger.html" }
+    ],
+    "datePublished": "2025",
+    "publication": "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+    "image": "https://liviaets.github.io/material/realistic-wsol/overestimation.png",
+    "url": "https://liviaets.github.io/research/realistic-wsol-protocol.html",
+    "about": ["Weakly Supervised Object Localization", "Computer Vision", "Model Selection", "Evaluation Protocol"],
+    "publisher": { "@type": "ResearchOrganization", "name": "LIVIA, ÉTS Montréal", "url": "https://liviaets.github.io/" },
+    "sameAs": [
+      "https://arxiv.org/abs/2404.10034",
+      "https://github.com/shakeebmurtaza/wsol_model_selection",
+      "https://sbelharbi.github.io/realistic-wsol-protocol/"
+    ]
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+  <script>(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}document.documentElement.classList.add("js");})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css?v=3">
+</head>
+<body>
+
+  <div class="reading-progress"></div>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="nav-brand" href="/"><img src="/images/brand/livia-logo.svg" alt="LIVIA"></a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/team.html">Team</a></li>
+        <li><a href="/datasets.html">Datasets</a></li>
+        <li><a class="nav-chip" href="/datasets/bah-challenge.html" title="3rd AH Recognition Challenge, ABAW 11th @ ECCV 2026">★ AH Challenge</a></li>
+        <li><a href="/join.html">Join</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle theme"></button>
+        <button class="icon-btn nav-burger" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="blog-hero">
+      <div class="read reveal">
+        <div class="kicker">Paper · IEEE/CVF WACV 2025</div>
+        <h1>A Realistic Protocol for Evaluation of Weakly Supervised Object Localization</h1>
+        <p class="sub">How do you pick the best localization model when you have no bounding boxes to check it against? This work replaces manual box annotations with automatically generated pseudo boxes, giving WSOL an evaluation protocol that holds up in the real world.</p>
+        <div class="meta">
+          <span>&#128221; <b>WACV</b> 2025</span>
+          <span>&#129516; <b>SS · CLIP · RPN</b> proposals</span>
+          <span>&#128202; <b>1000 to 1</b> threshold search</span>
+          <span>&#129302; <b>CUB · ImageNet · GlaS · Camelyon16</b></span>
+        </div>
+        <div class="profile-actions" style="margin-top:22px">
+          <a class="btn btn-primary" href="https://arxiv.org/abs/2404.10034" target="_blank" rel="noopener">Read the paper (arXiv) &rarr;</a>
+          <a class="btn btn-ghost" href="https://github.com/shakeebmurtaza/wsol_model_selection" target="_blank" rel="noopener">Code &amp; pseudo-boxes</a>
+        </div>
+      </div>
+    </section>
+
+    <article class="post">
+      <div class="read">
+
+        <p class="authorline reveal"><strong>Shakeeb Murtaza</strong>, Soufiane Belharbi, Marco Pedersoli, Eric Granger</p>
+        <p class="affil reveal">LIVIA, ILLS, Dept. of Systems Engineering, ÉTS Montréal, Canada</p>
+
+        <div class="badges reveal">
+          <a href="https://arxiv.org/abs/2404.10034" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/arXiv-2404.10034-b31b1b.svg?logo=arxiv&logoColor=B31B1B" alt="arXiv"></a>
+          <a href="https://github.com/shakeebmurtaza/wsol_model_selection" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Github-wsol__model__selection-brightgreen.svg?logo=github" alt="GitHub"></a>
+          <a href="https://sbelharbi.github.io/realistic-wsol-protocol/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Project-page-blue?logo=githubpages" alt="Project page"></a>
+        </div>
+
+        <p class="lead-para reveal">Weakly Supervised Object Localization trains a model to both classify an image and locate the object inside it, using only class labels. The promise is appealing: no expensive bounding boxes. The catch, hidden in plain sight, is that the field has been quietly using boxes anyway, to choose models and to set thresholds. This paper removes that crutch.</p>
+
+        <h2 class="reveal"><span class="nm">01 · Background</span>What WSOL promises</h2>
+        <p class="reveal">Weakly Supervised Object Localization (WSOL) lets a deep network learn classification and localization from coarse class labels alone, sidestepping the cost of annotating datasets with bounding boxes. Class Activation Mapping (CAM) is the dominant approach: it produces a spatial heatmap that highlights the object, which is then thresholded into a box. The appeal is obvious, since labelling a class is far cheaper than drawing a box on every image.</p>
+
+        <h2 class="reveal"><span class="nm">02 · The problem</span>The evaluation protocol is not realistic</h2>
+        <p class="reveal">A WSOL method should need class labels only. Yet in practice two steps quietly reintroduce box supervision. First, <strong>model selection</strong>: choosing when to stop training and which hyper-parameters to keep needs a way to measure localization on a validation set, and the common protocol uses manually annotated ground-truth boxes for that. Second, <strong>threshold estimation</strong>: turning a heatmap into a box needs a threshold, and many works tune it directly on the test set. Both steps assume boxes that, by definition, do not exist in a weakly supervised setting.</p>
+        <p class="reveal">The consequence is inflated numbers. When models are selected with ground-truth boxes and thresholds are read off the test set, reported localization accuracy is much higher than what the same method delivers once those boxes are taken away. The figure below makes the gap concrete across eight well-known methods: the realistic setting (blue, classification-based selection with automatic Otsu thresholding on validation) sits far below the box-assisted settings (red and green).</p>
+        <div class="figure reveal"><a class="frame" href="/material/realistic-wsol/overestimation.png" target="_blank" rel="noopener"><img src="/material/realistic-wsol/overestimation.png" alt="Localization accuracy across WSOL methods under different selection and thresholding settings"></a><figcaption>Using ground-truth boxes for selection and test-set thresholds (red, green) overestimates localization accuracy. The realistic setting (blue) drops sharply.</figcaption></div>
+        <p class="pullquote reveal">Having access to manual localization supervision during training goes against the WSOL setting, and it overestimates model performance.</p>
+
+        <h2 class="reveal"><span class="nm">03 · The insight</span>Coarse boxes are good enough to choose a model</h2>
+        <p class="reveal">Two observations drive the solution. First, classification and localization converge at different times: strong localization often appears early and then degrades, while the classifier keeps improving, so picking the model with the best classifier is not the same as picking the model that localizes best. Localization cues are needed for selection. Second, those cues do not have to be perfect. The authors perturbed ground-truth boxes across ten noise levels and ran hundreds of experiments, and model selection stayed stable: the epochs chosen with noisy boxes closely matched those chosen with clean boxes. Coarse localization signal is enough to select a good model.</p>
+
+        <h2 class="reveal"><span class="nm">04 · The protocol</span>Pseudo boxes instead of manual ones</h2>
+        <p class="reveal">If noisy boxes work, they can be produced automatically. The protocol introduces a pseudo-annotator that labels the validation set with boxes using only class labels and an off-the-shelf region proposal model. Three sources are studied, spanning different levels of supervision:</p>
+        <ul class="reveal">
+          <li><strong>Selective Search (SS)</strong>: a fully unsupervised method that needs no training.</li>
+          <li><strong>CLIP</strong>: a vision-language model prompted with class names, whose activation maps are converted into boxes.</li>
+          <li><strong>RPN</strong>: a class-agnostic region proposal network trained on generic detection data.</li>
+        </ul>
+        <p class="reveal">Each source returns several candidate boxes per image. To pick the right one, a pointing-game analysis harvests the CAM of a pretrained classifier, finds its peak activation, and keeps the proposal that best overlaps that peak, ranking candidates by classifier response. The CAM pointing accuracy is high (about 98.7 percent on the CUB validation split and 88 percent on ImageNet), so the filter reliably finds discriminative boxes.</p>
+        <div class="figure reveal"><a class="frame" href="/material/realistic-wsol/protocol.png" target="_blank" rel="noopener"><img src="/material/realistic-wsol/protocol.png" alt="Pseudo-box pipeline: proposals are generated then filtered by objectness and classifier output"></a><figcaption>The pipeline: a proposal generator produces candidate boxes, which are filtered by objectness score and classifier output, then used to measure localization.</figcaption></div>
+        <p class="reveal">The pseudo boxes are noisy, but usefully so. Their overlap with ground truth on the validation set is moderate (around 71 IoU for RPN and 69 for CLIP on CUB, lower for Selective Search), yet, as the noise study predicted, that is enough to guide selection. The examples below show how CLIP, RPN and Selective Search boxes compare against the ground truth.</p>
+        <div class="figure reveal"><a class="frame" href="/material/realistic-wsol/pseudo-vs-gt.png" target="_blank" rel="noopener"><img src="/material/realistic-wsol/pseudo-vs-gt.png" alt="Examples of ground-truth boxes compared with pseudo boxes from CLIP, RPN and Selective Search"></a><figcaption>Ground-truth boxes next to pseudo boxes from CLIP, RPN and Selective Search. They are imperfect, but informative.</figcaption></div>
+
+        <h2 class="reveal"><span class="nm">05 · Threshold</span>One threshold, estimated honestly</h2>
+        <p class="reveal">The same validation pseudo boxes solve the second problem. Instead of reading a threshold off the test set, the threshold that converts heatmaps into boxes is estimated on the validation set using the pseudo boxes, then applied unchanged to the test images. This keeps the test set untouched, and it collapses a brute-force search over 1,000 candidate thresholds down to a single estimated value.</p>
+
+        <h2 class="reveal"><span class="nm">06 · Results</span>As good as boxes, without the boxes</h2>
+        <p class="reveal">Across prominent WSOL methods on CUB and ImageNet, models selected and thresholded with pseudo boxes reach localization accuracy on par with models selected using ground-truth boxes, and they clearly beat the realistic class-label baseline that relies on automatic Otsu thresholding. The result holds when the analysis is extended to the GlaS and Camelyon16 medical imaging datasets, which suggests the protocol generalizes beyond natural images. The paper also recommends reporting non-thresholded IoU measures, which avoid the sensitivity of fixed thresholds such as IoU at 30, 50 or 70.</p>
+
+        <h2 class="reveal"><span class="nm">07 · Takeaways</span>Why it matters</h2>
+        <p class="reveal">The currently used protocol pushed WSOL forward, but its reliance on manual boxes for selection and on the test set for thresholding quietly overstated progress. Replacing both with pseudo boxes from off-the-shelf proposal models gives a more honest measure of what a method would actually achieve when no boxes are available. It is a practical, drop-in alternative to a fully annotated validation set. Selecting WSOL models with no localization annotation at all remains an open problem, and this work narrows the gap toward it.</p>
+
+        <h2 class="reveal"><span class="nm">08 · Cite</span>Citation</h2>
+        <pre class="reveal"><code>@inproceedings{murtaza25realistic,
+  title    = {A Realistic Protocol for Evaluation of Weakly
+              Supervised Object Localization},
+  author   = {Murtaza, S. and Belharbi, S. and Pedersoli, M.
+              and Granger, E.},
+  booktitle= {WACV},
+  year     = {2025}
+}</code></pre>
+        <p class="reveal" style="color:var(--muted);font-size:.92rem">Authored at LIVIA, ÉTS Montréal by <a href="/team/shakeeb-murtaza.html">Shakeeb Murtaza</a>, Soufiane Belharbi, Marco Pedersoli and <a href="/team/eric-granger.html">Eric Granger</a>. Code and generated pseudo boxes: <a href="https://github.com/shakeebmurtaza/wsol_model_selection" target="_blank" rel="noopener">github.com/shakeebmurtaza/wsol_model_selection</a>.</p>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <span class="fb">LIVIA</span>
+          <p>Laboratoire d'Imagerie, de Vision et d'Intelligence Artificielle, at the École de technologie supérieure (ÉTS), Université du Québec, Montréal.</p>
+          <a class="fets" href="https://www.etsmtl.ca/" target="_blank" rel="noopener"><img src="/images/brand/ets-logo.svg" alt="ÉTS"></a>
+        </div>
+        <div class="fcol">
+          <h5>Explore</h5>
+          <a href="/">Home</a><a href="/team.html">Team</a><a href="/datasets.html">Datasets</a><a href="/team/shakeeb-murtaza.html">Shakeeb Murtaza</a><a href="/join.html">Join Us</a>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <p>1100 Notre-Dame St W<br>Montréal, QC H3C 1K3, Canada<br><a href="mailto:eric.granger@etsmtl.ca">eric.granger@etsmtl.ca</a></p>
+        </div>
+      </div>
+      <div class="fbot"><span>© 2026 LIVIA, ÉTS, Université du Québec.</span><span>Made in Montréal</span></div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
