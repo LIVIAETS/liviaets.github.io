@@ -79,8 +79,100 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css?v=3">
+  <style>
+    /* ===== Homepage futuristic layer (scoped to body.home) ===== */
+
+    /* Animated aurora glow behind the hero */
+    .home .hero::before {
+      content: ""; position: absolute; inset: -25% -12%; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(38% 55% at 20% 28%, rgba(228,0,50,.22), transparent 62%),
+        radial-gradient(34% 50% at 82% 14%, rgba(255,91,77,.16), transparent 60%),
+        radial-gradient(42% 55% at 62% 92%, rgba(179,0,42,.16), transparent 62%);
+      filter: blur(8px);
+      animation: aurora 22s ease-in-out infinite alternate;
+    }
+    @keyframes aurora {
+      0%   { transform: translate3d(0,0,0) scale(1); }
+      50%  { transform: translate3d(-2.5%,2%,0) scale(1.07); }
+      100% { transform: translate3d(2.5%,-1.5%,0) scale(1.04); }
+    }
+
+    /* Masked technical grid for a lab/instrument feel */
+    .home .hero-grid {
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background:
+        linear-gradient(to right, var(--border) 1px, transparent 1px) 0 0 / 46px 46px,
+        linear-gradient(to bottom, var(--border) 1px, transparent 1px) 0 0 / 46px 46px;
+      -webkit-mask: radial-gradient(78% 72% at 50% 38%, #000 48%, transparent 100%);
+              mask: radial-gradient(78% 72% at 50% 38%, #000 48%, transparent 100%);
+      opacity: .6;
+    }
+
+    /* Slow-rotating conic ring accent, top-right */
+    .home .hero-orbit {
+      position: absolute; z-index: 0; pointer-events: none;
+      top: -160px; right: -160px; width: 520px; height: 520px; border-radius: 50%;
+      background: conic-gradient(from 0deg, transparent 0 62%, rgba(228,0,50,.30) 78%, rgba(255,91,77,.30) 88%, transparent 100%);
+      -webkit-mask: radial-gradient(closest-side, transparent 70%, #000 71% 84%, transparent 85%);
+              mask: radial-gradient(closest-side, transparent 70%, #000 71% 84%, transparent 85%);
+      filter: blur(.3px); opacity: .8;
+      animation: orbit 38s linear infinite;
+    }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+
+    /* Glassy, brand-lit hero badge */
+    .home .hero-badge {
+      background: var(--glass); backdrop-filter: saturate(160%) blur(10px);
+      -webkit-backdrop-filter: saturate(160%) blur(10px);
+      border-color: rgba(228,0,50,.28);
+      box-shadow: 0 0 0 1px rgba(228,0,50,.10), 0 8px 26px -16px rgba(228,0,50,.55);
+    }
+
+    /* Stat / metric tiles: gradient top-line + lift on hover */
+    .home .stat, .home .metric {
+      position: relative; overflow: hidden;
+      transition: transform .2s ease, border-color .2s ease, box-shadow .25s ease;
+    }
+    .home .stat::before, .home .metric::before {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--grad); opacity: .55;
+    }
+    .home .stat:hover, .home .metric:hover {
+      transform: translateY(-3px); border-color: rgba(228,0,50,.30);
+      box-shadow: 0 20px 44px -24px rgba(228,0,50,.45), var(--shadow-sm);
+    }
+
+    /* Cards: a gradient edge that lights up on hover */
+    .home .card { position: relative; overflow: hidden; }
+    .home .card::after {
+      content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px;
+      background: var(--grad); transform: scaleX(0); transform-origin: left;
+      transition: transform .35s cubic-bezier(.2,.7,.2,1);
+    }
+    .home .card:hover::after { transform: scaleX(1); }
+    .home .card:hover {
+      border-color: rgba(228,0,50,.32);
+      box-shadow: 0 26px 54px -26px rgba(228,0,50,.38), var(--shadow);
+    }
+    .home .card:hover .ic { color: var(--brand-2); }
+
+    /* Brighter glow on the primary hero button */
+    .home .hero-cta .btn-primary {
+      box-shadow: 0 14px 30px -12px rgba(228,0,50,.65), 0 0 0 1px rgba(228,0,50,.18);
+    }
+
+    /* Dataset cards: subtle brand lift */
+    .home .ds-card { transition: transform .2s ease, border-color .2s ease, box-shadow .25s ease; }
+    .home .ds-card:hover { border-color: rgba(228,0,50,.30); box-shadow: 0 26px 54px -26px rgba(228,0,50,.34), var(--shadow); }
+
+    @media (max-width: 720px) { .home .hero-orbit { display: none; } }
+    @media (prefers-reduced-motion: reduce) {
+      .home .hero::before, .home .hero-orbit { animation: none; }
+    }
+  </style>
 </head>
-<body>
+<body class="home">
 
   <!-- NAV -->
   <header class="nav">
@@ -105,6 +197,8 @@
     <!-- HERO -->
     <section class="hero">
       <canvas id="hero-canvas"></canvas>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-orbit" aria-hidden="true"></div>
       <div class="wrap">
         <span class="hero-badge reveal"><span class="dot"></span> Computer Vision &amp; AI · ÉTS Montréal</span>
         <h1 class="reveal" data-d="1">AI that learns to <span class="grad-text">see, understand &amp; reason</span></h1>
